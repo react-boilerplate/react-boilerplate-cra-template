@@ -1,13 +1,13 @@
 {
   "files": {
     "main.js": "/cra-template-react-boilerplate/static/js/main.4403b797.chunk.js",
-    "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.f3bf4fdc.js",
+    "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.14df49a4.js",
     "static/css/2.d54bb455.chunk.css": "/cra-template-react-boilerplate/static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js",
-    "static/js/3.d4d7a6ce.chunk.js": "/cra-template-react-boilerplate/static/js/3.d4d7a6ce.chunk.js",
-    "static/js/4.741eac0c.chunk.js": "/cra-template-react-boilerplate/static/js/4.741eac0c.chunk.js",
+    "static/js/3.7bdbc95e.chunk.js": "/cra-template-react-boilerplate/static/js/3.7bdbc95e.chunk.js",
+    "static/js/4.2fd4e04c.chunk.js": "/cra-template-react-boilerplate/static/js/4.2fd4e04c.chunk.js",
     "index.html": "/cra-template-react-boilerplate/index.html",
-    "precache-manifest.ba595fa683b0b92250ca650acc675e0d.js": "/cra-template-react-boilerplate/precache-manifest.ba595fa683b0b92250ca650acc675e0d.js",
+    "precache-manifest.28ab5d6a6071690cb8d3f425983023d0.js": "/cra-template-react-boilerplate/precache-manifest.28ab5d6a6071690cb8d3f425983023d0.js",
     "service-worker.js": "/cra-template-react-boilerplate/service-worker.js",
     "static/js/2.ad7bd703.chunk.js.LICENSE.txt": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.LICENSE.txt",
     "static/media/code-analysis.23647416.svg": "/cra-template-react-boilerplate/static/media/code-analysis.23647416.svg",
@@ -29,7 +29,7 @@
     "static/media/ts.be38d19d.svg": "/cra-template-react-boilerplate/static/media/ts.be38d19d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3bf4fdc.js",
+    "static/js/runtime-main.14df49a4.js",
     "static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js",
     "static/js/main.4403b797.chunk.js"
