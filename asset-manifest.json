@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/cra-template-react-boilerplate/static/js/main.139033eb.chunk.js",
-    "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.07e37d3d.js",
+    "main.js": "/cra-template-react-boilerplate/static/js/main.4cbc8e59.chunk.js",
+    "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.9c3f0fbe.js",
     "static/css/2.d54bb455.chunk.css": "/cra-template-react-boilerplate/static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js",
-    "static/js/3.2c1c5541.chunk.js": "/cra-template-react-boilerplate/static/js/3.2c1c5541.chunk.js",
-    "static/js/4.e4eaa030.chunk.js": "/cra-template-react-boilerplate/static/js/4.e4eaa030.chunk.js",
+    "static/js/3.3f7830a1.chunk.js": "/cra-template-react-boilerplate/static/js/3.3f7830a1.chunk.js",
+    "static/js/4.18febed4.chunk.js": "/cra-template-react-boilerplate/static/js/4.18febed4.chunk.js",
     "index.html": "/cra-template-react-boilerplate/index.html",
-    "precache-manifest.4e320f8685e89f31dfd71f02ed38091d.js": "/cra-template-react-boilerplate/precache-manifest.4e320f8685e89f31dfd71f02ed38091d.js",
+    "precache-manifest.517c16f88c96fecb8a762ae0d8625e50.js": "/cra-template-react-boilerplate/precache-manifest.517c16f88c96fecb8a762ae0d8625e50.js",
     "service-worker.js": "/cra-template-react-boilerplate/service-worker.js",
     "static/js/2.ad7bd703.chunk.js.LICENSE.txt": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.LICENSE.txt",
     "static/media/code-analysis.23647416.svg": "/cra-template-react-boilerplate/static/media/code-analysis.23647416.svg",
@@ -29,9 +29,9 @@
     "static/media/ts.be38d19d.svg": "/cra-template-react-boilerplate/static/media/ts.be38d19d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.07e37d3d.js",
+    "static/js/runtime-main.9c3f0fbe.js",
     "static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js",
-    "static/js/main.139033eb.chunk.js"
+    "static/js/main.4cbc8e59.chunk.js"
   ]
 }
