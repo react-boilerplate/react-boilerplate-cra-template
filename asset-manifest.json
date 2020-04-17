@@ -1,20 +1,14 @@
 {
   "files": {
     "main.js": "/cra-template-react-boilerplate/static/js/main.139033eb.chunk.js",
-    "main.js.map": "/cra-template-react-boilerplate/static/js/main.139033eb.chunk.js.map",
     "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.07e37d3d.js",
-    "runtime-main.js.map": "/cra-template-react-boilerplate/static/js/runtime-main.07e37d3d.js.map",
-    "static/css/2.bb342caa.chunk.css": "/cra-template-react-boilerplate/static/css/2.bb342caa.chunk.css",
+    "static/css/2.d54bb455.chunk.css": "/cra-template-react-boilerplate/static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js",
-    "static/js/2.ad7bd703.chunk.js.map": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.map",
     "static/js/3.2c1c5541.chunk.js": "/cra-template-react-boilerplate/static/js/3.2c1c5541.chunk.js",
-    "static/js/3.2c1c5541.chunk.js.map": "/cra-template-react-boilerplate/static/js/3.2c1c5541.chunk.js.map",
     "static/js/4.e4eaa030.chunk.js": "/cra-template-react-boilerplate/static/js/4.e4eaa030.chunk.js",
-    "static/js/4.e4eaa030.chunk.js.map": "/cra-template-react-boilerplate/static/js/4.e4eaa030.chunk.js.map",
     "index.html": "/cra-template-react-boilerplate/index.html",
-    "precache-manifest.81ac43acfceeda487f591d0be8fabbf7.js": "/cra-template-react-boilerplate/precache-manifest.81ac43acfceeda487f591d0be8fabbf7.js",
+    "precache-manifest.4e320f8685e89f31dfd71f02ed38091d.js": "/cra-template-react-boilerplate/precache-manifest.4e320f8685e89f31dfd71f02ed38091d.js",
     "service-worker.js": "/cra-template-react-boilerplate/service-worker.js",
-    "static/css/2.bb342caa.chunk.css.map": "/cra-template-react-boilerplate/static/css/2.bb342caa.chunk.css.map",
     "static/js/2.ad7bd703.chunk.js.LICENSE.txt": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.LICENSE.txt",
     "static/media/code-analysis.23647416.svg": "/cra-template-react-boilerplate/static/media/code-analysis.23647416.svg",
     "static/media/cra-logo.688761a2.svg": "/cra-template-react-boilerplate/static/media/cra-logo.688761a2.svg",
@@ -36,7 +30,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.07e37d3d.js",
-    "static/css/2.bb342caa.chunk.css",
+    "static/css/2.d54bb455.chunk.css",
     "static/js/2.ad7bd703.chunk.js",
     "static/js/main.139033eb.chunk.js"
   ]
