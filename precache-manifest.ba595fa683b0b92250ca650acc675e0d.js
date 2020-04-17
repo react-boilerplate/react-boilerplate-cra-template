@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c79df8e4f0a42798139cb2a8f6c6542",
+    "revision": "26c361756b80a0ff3a70500dc5ab7cc4",
     "url": "/cra-template-react-boilerplate/index.html"
   },
   {
@@ -16,20 +16,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bde7785a2e413e6504b5",
-    "url": "/cra-template-react-boilerplate/static/js/3.3f7830a1.chunk.js"
+    "revision": "a5842b22643a11121970",
+    "url": "/cra-template-react-boilerplate/static/js/3.d4d7a6ce.chunk.js"
   },
   {
-    "revision": "b0dff689d772020c2b08",
-    "url": "/cra-template-react-boilerplate/static/js/4.18febed4.chunk.js"
+    "revision": "a5733a1d2f8f2ee54979",
+    "url": "/cra-template-react-boilerplate/static/js/4.741eac0c.chunk.js"
   },
   {
-    "revision": "630d958a4b4603e6fde5",
-    "url": "/cra-template-react-boilerplate/static/js/main.4cbc8e59.chunk.js"
+    "revision": "29ce658fd276afd4efd5",
+    "url": "/cra-template-react-boilerplate/static/js/main.4403b797.chunk.js"
   },
   {
-    "revision": "560ec660855386119e21",
-    "url": "/cra-template-react-boilerplate/static/js/runtime-main.9c3f0fbe.js"
+    "revision": "dd35351c3f74c7b70c2e",
+    "url": "/cra-template-react-boilerplate/static/js/runtime-main.f3bf4fdc.js"
   },
   {
     "revision": "236474166bd9dd0b2a5d5f504a658eb2",
