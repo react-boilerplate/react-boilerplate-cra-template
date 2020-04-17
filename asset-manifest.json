@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/cra-template-react-boilerplate/static/js/main.6a724a15.chunk.js",
-    "main.js.map": "/cra-template-react-boilerplate/static/js/main.6a724a15.chunk.js.map",
+    "main.js": "/cra-template-react-boilerplate/static/js/main.13373fe1.chunk.js",
+    "main.js.map": "/cra-template-react-boilerplate/static/js/main.13373fe1.chunk.js.map",
     "runtime-main.js": "/cra-template-react-boilerplate/static/js/runtime-main.2ca7688f.js",
     "runtime-main.js.map": "/cra-template-react-boilerplate/static/js/runtime-main.2ca7688f.js.map",
     "static/css/2.bb342caa.chunk.css": "/cra-template-react-boilerplate/static/css/2.bb342caa.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/4.e4eaa030.chunk.js": "/cra-template-react-boilerplate/static/js/4.e4eaa030.chunk.js",
     "static/js/4.e4eaa030.chunk.js.map": "/cra-template-react-boilerplate/static/js/4.e4eaa030.chunk.js.map",
     "index.html": "/cra-template-react-boilerplate/index.html",
-    "precache-manifest.50f9a663fe3ba65f79093559a0bf510d.js": "/cra-template-react-boilerplate/precache-manifest.50f9a663fe3ba65f79093559a0bf510d.js",
+    "precache-manifest.9e153b7ae906be02cc8d046afb6517f3.js": "/cra-template-react-boilerplate/precache-manifest.9e153b7ae906be02cc8d046afb6517f3.js",
     "service-worker.js": "/cra-template-react-boilerplate/service-worker.js",
     "static/css/2.bb342caa.chunk.css.map": "/cra-template-react-boilerplate/static/css/2.bb342caa.chunk.css.map",
     "static/js/2.ad7bd703.chunk.js.LICENSE.txt": "/cra-template-react-boilerplate/static/js/2.ad7bd703.chunk.js.LICENSE.txt",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.2ca7688f.js",
     "static/css/2.bb342caa.chunk.css",
     "static/js/2.ad7bd703.chunk.js",
-    "static/js/main.6a724a15.chunk.js"
+    "static/js/main.13373fe1.chunk.js"
   ]
 }
