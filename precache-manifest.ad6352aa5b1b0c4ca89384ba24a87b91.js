@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da6cd3bc6695f2dded55c9ed2204a9c5",
+    "revision": "a4ea5dbb50726431924bec3a13063995",
     "url": "/react-boilerplate-cra-template/index.html"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-boilerplate-cra-template/static/js/4.05e78b65.chunk.js"
   },
   {
-    "revision": "7449150033b70c27fa44",
-    "url": "/react-boilerplate-cra-template/static/js/main.f6d657a9.chunk.js"
+    "revision": "22be69dc41ca368b6e36",
+    "url": "/react-boilerplate-cra-template/static/js/main.1f69e2d1.chunk.js"
   },
   {
     "revision": "2b3d0cd5c4979fcfe92d",
