@@ -98,14 +98,12 @@ changes for real.
 
 This project uses [commitlint](https://github.com/conventional-changelog/commitlint) for formating the commit messages. Check [here](https://www.conventionalcommits.org/en/v1.0.0/) for understanding the commit message format (or take a look at our commit history).
 
-In short commit messages must follow the format
+Pull Requests are squashed merged, so you don't have to use this format for your commits. Git hook is only running if you are commit to the `dev` branch directly. However, your PR title will be checked and you can see the results in the status checks for your PR
+
+In short PR title must follow the format
 
 ```
 <type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
 ```
 
 where `type` can be one of the followings in [.versionrc.js](./.versionrc.js)

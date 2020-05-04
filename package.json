@@ -71,7 +71,7 @@
     "hooks": {
       "pre-commit": "npm run delete:cra-app && npm run checkTs && lint-staged",
       "prepare-commit-msg": "devmoji -e",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "if git-branch-is dev; then commitlint -E HUSKY_GIT_PARAMS; fi"
     }
   },
   "jest": {
@@ -142,6 +142,7 @@
     "eslint-plugin-react-hooks": "3.0.0",
     "eslint-plugin-redux-saga": "1.1.3",
     "gh-pages": "2.2.0",
+    "git-branch-is": "3.1.0",
     "husky": "4.2.5",
     "jest-styled-components": "7.0.2",
     "jest-watch-typeahead": "0.4.2",
