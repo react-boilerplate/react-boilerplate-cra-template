@@ -1,9 +1,9 @@
 # Run commitlint on Pull Requests and commits
 name: commitlint
 on:
-  - pull_request:
+  pull_request:
       types: ['opened', 'edited', 'reopened', 'synchronize']
-  - push:
+  push:
       branches:
         - master
         - dev
