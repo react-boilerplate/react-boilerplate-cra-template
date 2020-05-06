@@ -6,7 +6,7 @@ import { FormLabel } from 'app/components/FormLabel';
 import { Input } from './components/Input';
 import { RepoItem } from './RepoItem';
 import { TextButton } from './components/TextButton';
-import { sliceKey, reducer, actions } from './slice';
+import { sliceKey, reducer, actions, getGithubRepos } from './slice';
 import { githubRepoFormSaga } from './saga';
 import {
   selectUsername,
@@ -30,7 +30,7 @@ export function GithubRepoForm() {
 
   const onChangeUsername = (evt: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(actions.changeUsername(evt.currentTarget.value));
-    dispatch(actions.loadRepos());
+    dispatch(getGithubRepos());
   };
 
   const useEffectOnMount = (effect: React.EffectCallback) => {
@@ -39,7 +39,7 @@ export function GithubRepoForm() {
   useEffectOnMount(() => {
     // When initial state username is not null, submit the form to load repos
     if (username && username.trim().length > 0) {
-      dispatch(actions.loadRepos());
+      dispatch(getGithubRepos());
     }
   });
 

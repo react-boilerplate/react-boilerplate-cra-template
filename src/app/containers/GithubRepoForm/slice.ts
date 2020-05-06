@@ -15,6 +15,7 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from 'utils/@reduxjs/toolkit';
 import { ContainerState, RepoErrorType } from './types';
 import { Repo } from 'types/Repo';
+import { createRoutine } from 'redux-saga-routines';
 
 // The initial state of the GithubRepoForm container
 export const initialState: ContainerState = {
@@ -24,24 +25,28 @@ export const initialState: ContainerState = {
   error: null,
 };
 
+export const getGithubRepos = createRoutine('githubRepoForm');
+
 const githubRepoFormSlice = createSlice({
   name: 'githubRepoForm',
   initialState,
   reducers: {
-    changeUsername(state, action: PayloadAction<string>) {
+    changeUsername: (state, action: PayloadAction<string>) => {
       state.username = action.payload;
     },
-    loadRepos(state) {
+  },
+  extraReducers: {
+    [getGithubRepos.REQUEST]: state => {
       state.loading = true;
       state.error = null;
       state.repositories = [];
     },
-    reposLoaded(state, action: PayloadAction<Repo[]>) {
+    [getGithubRepos.SUCCESS]: (state, action: PayloadAction<Repo[]>) => {
       const repos = action.payload;
       state.repositories = repos;
       state.loading = false;
     },
-    repoError(state, action: PayloadAction<RepoErrorType>) {
+    [getGithubRepos.FAILURE]: (state, action: PayloadAction<RepoErrorType>) => {
       state.error = action.payload;
       state.loading = false;
     },
