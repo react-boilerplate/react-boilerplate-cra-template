@@ -4,7 +4,7 @@
 
 ## Why not using [connected-react-router](https://github.com/supasate/connected-react-router)?
 
-There is detailed explanation [here](https://reacttraining.com/react-router/web/guides/redux-integration/deep-integration). In short, it is not suggested to integrate route with redux, simply because it shoudln't be needed. There are other ways of navigating as explained there. 
+There is detailed explanation [here](https://reacttraining.com/react-router/web/guides/redux-integration/deep-integration). In short, it is not suggested to integrate route with redux, simply because it shouldn't be needed. There are other ways of navigating as explained there.
 
 ## Usage
 
@@ -17,7 +17,6 @@ To add a new route, simply import the `Route` component and use it standalone or
 Top level routes are located in `src/app/index.tsx`.
 
 If you want your route component (or any component for that matter) to be loaded asynchronously, use container or component generator with 'Do you want to load resources asynchronously?' option activated.
-
 
 ## Child Routes
 
