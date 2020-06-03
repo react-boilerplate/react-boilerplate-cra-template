@@ -103,6 +103,9 @@ import { sliceKey, reducer, actions } from './slice';
 import { selectUsername } from './selectors';
 
 export function HomePage() {
+  // Used to dispatch slice actions
+  const dispatch = useDispatch();
+
   // Inject the slice to redux
   useInjectReducer({ key: sliceKey, reducer: reducer });
 
@@ -112,7 +115,7 @@ export function HomePage() {
 
   const textInputChanged = evt => {
     // Trigger the action to change the state. It accepts `string` as we declared in `slice.ts`. Fully type-safe ✅
-    actions.changeUsername(evt.target.value);
+    dispatch(actions.changeUsername(evt.target.value));
   };
   // ...
 }
