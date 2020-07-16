@@ -154,7 +154,7 @@
     "rimraf": "3.0.2",
     "serve": "11.3.0",
     "shelljs": "0.8.3",
-    "standard-version": "7.1.0",
+    "standard-version": "8.0.1",
     "stylelint": "13.2.1",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-styled-components": "0.1.1",
