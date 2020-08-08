@@ -18,7 +18,7 @@ This documentation assumes that you are familiar with the [create-react-app]. Th
 
 ## Let's get started with the documentation
 
-In the following sections we will introduce this boilerplate to you shortly and then start diving into details with the [Building Blocks](building-blocks/overview) section
+In the following sections we will introduce this boilerplate to you shortly and then start diving into details with the [Building Blocks](building-blocks) section
 
 {% hint style="info" %}
 
