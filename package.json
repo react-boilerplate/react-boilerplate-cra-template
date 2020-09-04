@@ -82,6 +82,7 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*/*.d.ts",
       "!src/**/*/Loadable.{js,jsx,ts,tsx}",
+      "!src/**/*/messages.ts",
       "!src/**/*/types.ts",
       "!src/index.tsx",
       "!src/serviceWorker.ts"

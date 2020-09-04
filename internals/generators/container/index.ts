@@ -163,6 +163,15 @@ export const containerGenerator: PlopGenerator = {
       });
     }
 
+    if (data.wantTranslations) {
+      actions.push({
+        type: 'add',
+        path: `${containerPath}/messages.ts`,
+        templateFile: './container/messages.ts.hbs',
+        abortOnFail: true,
+      });
+    }
+
     actions.push({
       type: 'prettify',
       data: { path: `${containersPath}/${data.ComponentName}/**` },

@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async';
 {{/if}}
 {{#if wantTranslations}}
 import { useTranslation } from 'react-i18next';
+import { messages } from './messages';
 {{/if}}
 {{#if wantSlice}}
 import { useSelector, useDispatch } from 'react-redux';
@@ -87,6 +88,7 @@ return (
       {{/if}}
       {{#if wantTranslations}}
       {t('')}
+      {/*  {t(...messages.someThing)}  */}
       {{/if}}
       {{#if wantStyledComponents}}
     </Div>

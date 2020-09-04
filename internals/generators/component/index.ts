@@ -97,6 +97,15 @@ export const componentGenerator: PlopGenerator = {
       });
     }
 
+    if (data.wantTranslations) {
+      actions.push({
+        type: 'add',
+        path: `${containerPath}/messages.ts`,
+        templateFile: './component/messages.ts.hbs',
+        abortOnFail: true,
+      });
+    }
+
     actions.push({
       type: 'prettify',
       data: { path: `${componentsPath}/${data.ComponentName}/**` },
