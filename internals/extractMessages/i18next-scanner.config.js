@@ -41,17 +41,21 @@ module.exports = {
     const { base, ext } = path.parse(file.path);
     if (extensions.includes(ext) && !base.includes('.d.ts')) {
       const content = fs.readFileSync(file.path, enc);
-      parseContent(content, this.parser);
+      const shouldStringfyObjects = base === 'messages.ts';
+      parseContent(content, this.parser, shouldStringfyObjects);
     }
 
     done();
   },
 };
-function parseContent(content, parser) {
+function parseContent(content, parser, shouldStringfyObjects = true) {
   const { outputText } = typescript.transpileModule(content, {
     compilerOptions: compilerOptions,
   });
-  const cleanedContent = stringfyTranslationObjects(outputText);
+  let cleanedContent = outputText;
+  if (shouldStringfyObjects) {
+    cleanedContent = stringfyTranslationObjects(outputText);
+  }
   parser.parseFuncFromString(cleanedContent);
 }
 
