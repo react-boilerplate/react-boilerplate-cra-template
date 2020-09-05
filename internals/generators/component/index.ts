@@ -2,7 +2,7 @@
  * Component Generator
  */
 
-import { Actions, PlopGenerator } from 'node-plop';
+import { Actions, PlopGeneratorConfig } from 'node-plop';
 import path from 'path';
 
 import { componentExists } from '../utils';
@@ -17,7 +17,7 @@ export enum ComponentProptNames {
 }
 const componentsPath = path.join(__dirname, '../../../src/app/components');
 
-export const componentGenerator: PlopGenerator = {
+export const componentGenerator: PlopGeneratorConfig = {
   description: 'Add an unconnected component',
   prompts: [
     {
