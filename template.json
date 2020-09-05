@@ -89,10 +89,10 @@
       "jest-styled-components": "7.0.2",
       "react-test-renderer": "16.13.0",
       "lint-staged": "10.0.8",
-      "node-plop": "0.25.0",
-      "plop": "2.6.0",
+      "node-plop": "0.26.2",
+      "plop": "2.7.4",
       "serve": "11.3.0",
-      "shelljs": "0.8.3",
+      "shelljs": "0.8.4",
       "husky": "4.2.3",
       "replace-in-file": "6.0.0",
       "i18next-scanner": "2.11.0"
