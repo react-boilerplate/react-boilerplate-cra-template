@@ -3,7 +3,8 @@ import { FormLabel } from 'app/components/FormLabel';
 import { Radio } from 'app/components/Radio';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
-import { translations, LanguageKey } from 'locales/i18n';
+import { LanguageKey } from 'locales/i18n';
+import { messages } from './messages';
 
 export function LanguageSwitch() {
   const { t, i18n } = useTranslation();
@@ -14,7 +15,7 @@ export function LanguageSwitch() {
 
   return (
     <Wrapper>
-      <FormLabel>{t(translations.i18nFeature.selectLanguage)}</FormLabel>
+      <FormLabel>{t(...messages.selectLanguage)}</FormLabel>
       <Languages>
         <Radio
           id="en"
