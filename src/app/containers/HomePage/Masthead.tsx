@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components/macro';
 import { Logos } from './Logos';
 import { Title } from 'app/containers/HomePage/components/Title';

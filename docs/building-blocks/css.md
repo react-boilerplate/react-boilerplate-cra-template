@@ -25,7 +25,7 @@ Below creates two styled react components (`<Title>`, `<Wrapper>`) and renders t
 as children of the `<Header>` component:
 
 ```ts
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components/macro';
 
 // Create a <Title> react component that renders an <h1> which is

@@ -2,7 +2,7 @@
 
 In this section we are going to explain the **building blocks** of the boilerplate in details.
 
-First we have to look at what is happening when react starts its life with out `index.tsx` file.
+First we have to look at what is happening when react starts its life with `index.tsx` file.
 
 ### `src/index.tsx`:
 
