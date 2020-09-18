@@ -44,7 +44,6 @@
     "lint:fix": "npm run eslint -- --fix src",
     "lint:css": "stylelint src/**/*.css",
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
-    "cleanAndSetup": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/clean.ts",
     "prettify": "prettier --write",
     "// ---TESTING TEMPLATE---": "",
     "verify-startingTemplate-changes": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/verify-startingTemplate-changes.ts",

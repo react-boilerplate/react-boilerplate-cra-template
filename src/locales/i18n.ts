@@ -4,15 +4,11 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './en/translation.json';
-import de from './de/translation.json';
 import { ConvertedToObjectType } from './types';
 
 const translationsJson = {
   en: {
     translation: en,
-  },
-  de: {
-    translation: de,
   },
 };
 
@@ -38,7 +34,6 @@ const convertLanguageJsonToObject = (obj: any, dict: {}, current?: string) => {
     }
   });
 };
-
 export const i18n = i18next
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
@@ -50,6 +45,7 @@ export const i18n = i18next
   .init(
     {
       resources: translationsJson,
+
       fallbackLng: 'en',
       debug:
         process.env.NODE_ENV !== 'production' &&
