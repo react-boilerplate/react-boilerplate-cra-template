@@ -100,7 +100,7 @@ export const componentGenerator: PlopGeneratorConfig = {
     if (data.wantTranslations) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/messages.ts`,
+        path: `${componentPath}/messages.ts`,
         templateFile: './component/messages.ts.hbs',
         abortOnFail: true,
       });
