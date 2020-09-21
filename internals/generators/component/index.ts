@@ -68,12 +68,12 @@ export const componentGenerator: PlopGeneratorConfig = {
     },
   ],
   actions: (data: { [P in ComponentProptNames]: string }) => {
-    const containerPath = `${componentsPath}/{{properCase ${ComponentProptNames.ComponentName}}}`;
+    const componentPath = `${componentsPath}/{{properCase ${ComponentProptNames.ComponentName}}}`;
 
     const actions: Actions = [
       {
         type: 'add',
-        path: `${containerPath}/index.tsx`,
+        path: `${componentPath}/index.tsx`,
         templateFile: './component/index.tsx.hbs',
         abortOnFail: true,
       },
@@ -82,7 +82,7 @@ export const componentGenerator: PlopGeneratorConfig = {
     if (data.wantLoadable) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/Loadable.ts`,
+        path: `${componentPath}/Loadable.ts`,
         templateFile: './component/loadable.ts.hbs',
         abortOnFail: true,
       });
@@ -91,7 +91,7 @@ export const componentGenerator: PlopGeneratorConfig = {
     if (data.wantTests) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/__tests__/index.test.tsx`,
+        path: `${componentPath}/__tests__/index.test.tsx`,
         templateFile: './component/index.test.tsx.hbs',
         abortOnFail: true,
       });
@@ -100,7 +100,7 @@ export const componentGenerator: PlopGeneratorConfig = {
     if (data.wantTranslations) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/messages.ts`,
+        path: `${componentPath}/messages.ts`,
         templateFile: './component/messages.ts.hbs',
         abortOnFail: true,
       });
