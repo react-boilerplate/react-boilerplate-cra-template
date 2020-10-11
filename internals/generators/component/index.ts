@@ -3,6 +3,7 @@
  */
 
 import { Actions, PlopGeneratorConfig } from 'node-plop';
+import path from 'path';
 
 import { componentExists, listComponentsDirectories } from '../utils';
 
@@ -73,7 +74,11 @@ export const componentGenerator: PlopGeneratorConfig = {
     },
   ],
   actions: (data: { [P in ComponentProptNames]: string }) => {
-    const componentPath = `${data.componentPath}/{{properCase ${ComponentProptNames.ComponentName}}}`;
+    const componentPath = `${path.join(
+      __dirname,
+      '../../../',
+      data.componentPath,
+    )}/{{properCase ${ComponentProptNames.ComponentName}}}`;
 
     const actions: Actions = [
       {
