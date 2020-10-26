@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Store } from '@reduxjs/toolkit';
 import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
