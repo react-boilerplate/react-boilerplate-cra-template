@@ -11,7 +11,7 @@ import { ContainerProptNames } from '../generators/container';
 import { PlopGenerator as PG } from 'node-plop';
 
 interface PlopGenerator extends PG {
-  runActions?: <T extends string | number>(
+  runActions: <T extends string | number>(
     props: { [P in T]: any },
   ) => Promise<{ changes: []; failures: [] }>;
 }

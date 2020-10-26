@@ -1,11 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import { render } from '@testing-library/react';
 import { lazyLoad } from 'utils/loadable';
 
 const LoadingIndicator = () => <div>Loading</div>;
 
-const LazyComponenWithDefaultExport = lazyLoad(() =>
-  import('../../../internals/testing/loadable.mock'),
+const LazyComponenWithDefaultExport = lazyLoad(
+  () => import('../../../internals/testing/loadable.mock'),
 );
 
 const LazyComponentWithExportedFunction = lazyLoad(

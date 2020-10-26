@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components/macro';
 import { Title } from 'app/containers/HomePage/components/Title';
 import { Lead } from './components/Lead';
@@ -19,8 +19,8 @@ import { ReactComponent as ScaffoldingIcon } from './assets/scaffolding.svg';
 import { ReactComponent as OfflineFirstIcon } from './assets/offline-first.svg';
 import { ReactComponent as CodeAnalysisIcon } from './assets/code-analysis.svg';
 import { useTranslation } from 'react-i18next';
-import { translations } from 'locales/i18n';
 import { Link } from 'app/components/Link';
+import { messages } from './messages';
 
 export function Features() {
   const { t } = useTranslation();
@@ -82,9 +82,9 @@ export function Features() {
         <Feature>
           <INTLIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(translations.i18nFeature.title)} </SubTitle>
+            <SubTitle>{t(messages.i18nTitle)} </SubTitle>
             <P>
-              {t(translations.i18nFeature.description)}
+              {t(messages.i18nDescription)}
               <br />
               <small>
                 (Only some of the features below are translated to demonstrate
@@ -97,9 +97,9 @@ export function Features() {
         <Feature>
           <RouteIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(translations.routingFeature.title)}</SubTitle>
+            <SubTitle>{t(...messages.routingTitle)}</SubTitle>
             <P>
-              {t(translations.routingFeature.description)}
+              {t(messages.routingDescription)}
               <br />
               <small>
                 Go to our{' '}
@@ -112,15 +112,15 @@ export function Features() {
         <Feature>
           <InstantFeedbackIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(translations.feedbackFeature.title)}</SubTitle>
-            <P>{t(translations.feedbackFeature.description)}</P>
+            <SubTitle>{t(messages.feedbackTitle)}</SubTitle>
+            <P>{t(messages.feedbackDescription)}</P>
           </Content>
         </Feature>
         <Feature>
           <ScaffoldingIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(translations.scaffoldingFeature.title)}</SubTitle>
-            <P>{t(translations.scaffoldingFeature.description)}</P>
+            <SubTitle>{t(messages.scaffoldingTitle)}</SubTitle>
+            <P>{t(messages.scaffoldingDescription)}</P>
           </Content>
         </Feature>
         <Feature>

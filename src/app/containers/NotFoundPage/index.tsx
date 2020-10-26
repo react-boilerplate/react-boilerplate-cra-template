@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components/macro';
 import { P } from './P';
 import { Link } from 'app/components/Link';

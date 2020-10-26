@@ -7,7 +7,7 @@
 {{#if wantMemo}}
 import React, { memo } from 'react';
 {{else}}
-import React from 'react';
+import * as React from 'react';
 {{/if}}
 {{#if wantHeaders}}
 import { Helmet } from 'react-helmet-async';
@@ -39,6 +39,9 @@ import { select{{ properCase ComponentName }} } from './selectors';
 {{/if}}
 {{#if wantSaga}}
 import { {{ camelCase ComponentName }}Saga } from './saga';
+{{/if}}
+{{#if wantTranslations}}
+import { messages } from './messages';
 {{/if}}
 
 interface Props {}
@@ -87,6 +90,7 @@ return (
       {{/if}}
       {{#if wantTranslations}}
       {t('')}
+      {/*  {t(...messages.someThing)}  */}
       {{/if}}
       {{#if wantStyledComponents}}
     </Div>

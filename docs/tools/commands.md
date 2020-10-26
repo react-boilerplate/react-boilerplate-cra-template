@@ -73,6 +73,12 @@ npm run lint:fix
 
 Lints your code and tries to fix any errors it finds.
 
+## Extracting translation JSON Files
+
+```Shell
+npm run extract-messages
+```
+
 ## Typescript
 
 ```Shell
