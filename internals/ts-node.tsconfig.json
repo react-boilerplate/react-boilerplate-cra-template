@@ -4,6 +4,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true
   }
 }
