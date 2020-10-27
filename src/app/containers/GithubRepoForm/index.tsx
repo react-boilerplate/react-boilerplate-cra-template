@@ -34,6 +34,7 @@ export function GithubRepoForm() {
   };
 
   const useEffectOnMount = (effect: React.EffectCallback) => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(effect, []);
   };
   useEffectOnMount(() => {
