@@ -2,7 +2,7 @@
 
 ### Easy 5-Step Deployment Process
 
-_Step 1:_ Create a `netlifty.toml` file in the root directory of your project and copy this code below. Edit these settings if you did not follow the boilerplate structure. More settings available here (https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
+_Step 1:_ Create a `netlify.toml` file in the root directory of your project and copy this code below. Edit these settings if you did not follow the boilerplate structure. More settings available here (https://docs.netlify.com/configure-builds/file-based-configuration/#sample-file)
 
 ```
 [build]
