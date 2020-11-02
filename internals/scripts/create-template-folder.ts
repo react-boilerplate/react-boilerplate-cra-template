@@ -22,6 +22,10 @@ export function crateTemplateFolder(opts: Options = {}) {
   shell.mkdir('template/internals');
   copyToTemplate('internals/generators', true);
 
+  shell.mkdir('template/internals/extractMessages');
+  copyToTemplate('internals/extractMessages/i18next-scanner.config.js');
+  copyToTemplate('internals/extractMessages/stringfyTranslations.js');
+
   shell.mkdir('template/internals/scripts');
   copyToTemplate('internals/scripts/clean.ts');
 
