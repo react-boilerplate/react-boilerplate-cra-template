@@ -1,7 +1,7 @@
 {
   "name": "cra-template-rb",
   "description": "The official React Boilerplate template for Create React App",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-boilerplate/react-boilerplate-cra-template.git"
@@ -147,9 +147,9 @@
     "node-plop": "0.26.2",
     "plop": "2.7.4",
     "prettier": "2.1.1",
-    "react-scripts": "3.4.3",
     "react-test-renderer": "16.13.1",
     "replace-in-file": "6.1.0",
+    "react-scripts": "4.0.0",
     "rimraf": "3.0.2",
     "serve": "11.3.2",
     "shelljs": "0.8.4",
