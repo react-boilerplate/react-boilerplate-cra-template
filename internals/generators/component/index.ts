@@ -5,17 +5,17 @@
 import { Actions, PlopGeneratorConfig } from 'node-plop';
 import path from 'path';
 
-import { componentExists } from '../utils';
+import { componentExists, listComponentsDirectories } from '../utils';
 
 export enum ComponentProptNames {
   'ComponentName' = 'ComponentName',
+  'componentPath' = 'componentPath',
   'wantMemo' = 'wantMemo',
   'wantStyledComponents' = 'wantStyledComponents',
   'wantTranslations' = 'wantTranslations',
   'wantLoadable' = 'wantLoadable',
   'wantTests' = 'wantTests',
 }
-const componentsPath = path.join(__dirname, '../../../src/app/components');
 
 export const componentGenerator: PlopGeneratorConfig = {
   description: 'Add an unconnected component',
@@ -34,6 +34,12 @@ export const componentGenerator: PlopGeneratorConfig = {
 
         return 'The name is required';
       },
+    },
+    {
+      type: 'list',
+      name: ComponentProptNames.componentPath,
+      message: 'Where should it be created ?',
+      choices: listComponentsDirectories(),
     },
     {
       type: 'confirm',
@@ -68,7 +74,11 @@ export const componentGenerator: PlopGeneratorConfig = {
     },
   ],
   actions: (data: { [P in ComponentProptNames]: string }) => {
-    const componentPath = `${componentsPath}/{{properCase ${ComponentProptNames.ComponentName}}}`;
+    const componentPath = `${path.join(
+      __dirname,
+      '../../../',
+      data.componentPath,
+    )}/{{properCase ${ComponentProptNames.ComponentName}}}`;
 
     const actions: Actions = [
       {
@@ -108,7 +118,7 @@ export const componentGenerator: PlopGeneratorConfig = {
 
     actions.push({
       type: 'prettify',
-      data: { path: `${componentsPath}/${data.ComponentName}/**` },
+      data: { path: `${data.componentPath}/${data.ComponentName}/**` },
     });
 
     return actions;

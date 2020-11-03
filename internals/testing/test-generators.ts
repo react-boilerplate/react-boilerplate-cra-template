@@ -120,6 +120,7 @@ async function generateComponent() {
     const p = componentGen
       .runActions<ComponentProptNames>({
         ComponentName: name,
+        componentPath: 'src/app/components',
         wantMemo: values[0],
         wantStyledComponents: values[1],
         wantLoadable: values[2],
