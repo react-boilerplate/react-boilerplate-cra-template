@@ -18,7 +18,7 @@ export const HomePage = lazyLoad(
 In this case, the app won't show anything while loading your component. You can however make it display a custom loader with:
 
 ```ts
-import React from 'react';
+import * as React from 'react';
 import { lazyLoad } from 'utils/loadable';
 
 export const HomePage = lazyLoad(() => import('./index'), {
