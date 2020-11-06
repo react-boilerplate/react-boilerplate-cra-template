@@ -2,20 +2,20 @@
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Shallow rendering](#shallow-rendering)
-- [react-testing-library](#react-testing-library)
-  - [Snapshot testing](#snapshot-testing)
-  - [Behavior testing](#behavior-testing)
-  <!-- /TOC -->
+- [Component testing](#component-testing)
+  - [Shallow rendering](#shallow-rendering)
+    - [`button.tsx`](#buttontsx)
+    - [`Homepage.tsx`](#homepagetsx)
+  - [react-testing-library](#react-testing-library) - [`button.test.tsx`](#buttontesttsx)
+    - [Snapshot testing](#snapshot-testing)
+    - [Behavior testing](#behavior-testing) - [`button.test.tsx`](#buttontesttsx-1) - [`button.test.tsx`](#buttontesttsx-2)
+    <!-- /TOC -->
 
 ## Shallow rendering
 
-React provides us with a nice add-on called the Shallow Renderer. This renderer
-will render a React component **one level deep**. Lets take a look at what that
-means with a simple `<Button>` component.
+React provides us with a nice add-on called the Shallow Renderer. This renderer will render a React component **one level deep**. Let's explore what that means with a simple `<Button>` component.
 
-This component renders a `<button>` element containing a checkmark icon and some
-text:
+This component renders a `<button>` element containing a checkmark icon and some text:
 
 #### `button.tsx`
 
@@ -35,7 +35,7 @@ function Button(props) {
 export default Button;
 ```
 
-_Note: This is a [state**less** ("dumb") component](../understanding-react-boilerplate.md#src-app)_
+_Note: This is a [state**less** (aka "dumb") component](../understanding-react-boilerplate.md#src-app)_
 
 It might be used in another component like this:
 
@@ -49,10 +49,9 @@ function HomePage() {
 }
 ```
 
-_Note: This is a [state**ful** ("smart") component](../understanding-react-boilerplate.md#src-app)_
+_Note: This is a [state**ful** (or "smart") component](../understanding-react-boilerplate.md#src-app)_
 
-When rendered normally with the standard `ReactDOM.render` function, this will
-be the HTML output
+When rendered normally with the standard `ReactDOM.render` function, this will be the HTML output
 (_Comments added in parallel to compare structures in HTML from JSX source_):
 
 ```html
@@ -63,11 +62,10 @@ be the HTML output
   Click Me!
   <!--   { props.children } -->
 </button>
-<!-- </Button>            -->
+<!-- </Button>              -->
 ```
 
-Conversely, when rendered with the shallow renderer, we'll get a String
-containing this "HTML":
+Conversely, when rendered with the shallow renderer, we'll get a String containing this "HTML":
 
 ```html
 <button>
@@ -77,26 +75,18 @@ containing this "HTML":
   Click Me!
   <!--   { props.children } -->
 </button>
-<!-- </Button>            -->
+<!-- </Button>              -->
 ```
 
-If we test our `Button` with the normal renderer and there's a problem
-with the `CheckmarkIcon` then the test for the `Button` will fail as well.
-This makes it harder to find the culprit. Using the _shallow_ renderer, we isolate
-the problem's cause since we don't render any other components other than the
-one we're testing!
+If we test our `Button` with the normal renderer and there's a problem with the `CheckmarkIcon`, then the test for the `Button` will fail as well. This makes it harder to find the culprit. Using the _shallow_ renderer, we isolate the problem's cause since we don't render any components other than the one we're testing!
 
-The problem with the shallow renderer is that all assertions have to be done
-manually, and you cannot do anything that needs the DOM.
+Note that when using the shallow renderer, all assertions have to be done manually, and you cannot test anything that needs the DOM.
 
 ## react-testing-library
 
-In order to write more maintainable tests which also resemble more closely the way
-our component is used in real life, we have included [react-testing-library](https://github.com/testing-library/react-testing-library).
-This library renders our component within an actual DOM and provides utilities for querying it.
+To write more maintainable tests that more closely resemble the way our component is used in real life, we have included [react-testing-library](https://github.com/testing-library/react-testing-library). This library renders our component within a simulated DOM and provides utilities for querying it.
 
-Let's give it a go with our `<Button />` component, shall we? First, let's check that it renders our component with its
-children, if any, and second that it handles clicks.
+Let's give it a go with our `<Button />` component, shall we? First, let's check that it renders our component with its children, if any, and second, that it handles clicks.
 
 This is our test setup:
 
@@ -116,15 +106,11 @@ describe('<Button />', () => {
 
 ### Snapshot testing
 
-Let's start by ensuring that it renders our component and no changes happened to it since the last time it was
-successfully tested.
+Let's start by ensuring that it renders our component and no changes happened to that component since the last time it was successfully tested.
 
-We will do so by rendering it and creating a _[snapshot](https://jestjs.io/docs/en/snapshot-testing)_
-which can be compared with a previously committed snapshot. If no snapshot exists, a new one is created.
+We will do so by rendering it and creating a _[snapshot](https://jestjs.io/docs/en/snapshot-testing)_ which can be compared with a previously committed snapshot. If no snapshot exists, a new one is created.
 
-For this, we first call `render`. This will render our `<Button />` component into a _container_, by default a
-`<div>`, which is appended to `document.body`. We then create a snapshot and `expect` that this snapshot is the same as
-the existing snapshot, taken in a previous run of this test and committed to the repository.
+For this, we first call `render`. This will render our `<Button />` component into a _container_, by default a `<div>`, which is appended to `document.body`. We then create a snapshot and `expect` that this snapshot is the same as the existing snapshot, taken in a previous run of this test, and committed to the repository.
 
 ```ts
 it('renders and matches the snapshot', () => {
@@ -135,24 +121,17 @@ it('renders and matches the snapshot', () => {
 });
 ```
 
-`render` returns an object that has a property `container` and yes, this is the container our
-`<Button />` component has been rendered in.
+`render` returns an object that has a property `container` and yes, this is the container our `<Button />` component has been rendered in.
 
-As this is rendered within a _normal_ DOM we can query our
-component with `container.firstChild`. This will be our subject for a snapshot.
-Snapshots are placed in the `__snapshots__` folder within our `__tests__` folder. Make sure you commit
-these snapshots to your repository.
+As this is rendered within a _normal_ DOM we can query our component with `container.firstChild`. This will be our subject for a snapshot. Snapshots are placed in the `__snapshots__` folder within our `__tests__` folder. Make sure you commit these snapshots to your repository.
 
-Great! So, now if anyone makes any change to our `<Button />` component the test will fail and we get notified of what
-changed.
+Great! So, now if anyone makes any change to our `<Button />` component the test will fail and we will get notified about the change.
 
 ### Behavior testing
 
 Onwards to our last and most advanced test: checking that our `<Button />` handles clicks correctly.
 
-We'll use a [mock function](https://jestjs.io/docs/en/mock-functions) for this. A mock function is a function that
-keeps track of _if_, _how often_, and _with what arguments_ it has been called. We pass this function as the `onClick` handler to our component,
-simulate a click and, lastly, check that our mock function was called:
+We'll use a [mock function](https://jestjs.io/docs/en/mock-functions) for this. A mock function is a function that keeps track of _if_, _how often_, and _with what arguments_ it has been called. We pass this function as the `onClick` handler to our component, simulate a click, and, lastly, check that our mock function was called:
 
 #### `button.test.tsx`
 
@@ -195,7 +174,6 @@ describe('<Button />', () => {
 });
 ```
 
-And that's how you unit test your components and make sure they work correctly!
+And that's how you unit-test your components and make sure they work correctly!
 
-Also have a look at our example application. It deliberately shows some variations of implementing tests with
-react-testing-library.
+Be sure to have a look at our example application. It deliberately shows some variations of test implementations with `react-testing-library`.

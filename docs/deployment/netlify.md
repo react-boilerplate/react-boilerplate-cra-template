@@ -27,13 +27,16 @@ _Step 1:_ Create a `netlify.toml` file in the root directory of your project and
 
 _Step 2:_ Commit your code and push your latest updates to a GitHub repository.
 
-_Step 3:_ Register or Login in at Netlify (https://app.netlify.com/).
+_Step 3:_ Register or Login in at [Netlify](https://app.netlify.com/).
 
 _Step 4:_ In your account | team page click `New site from git` then chose your repository.
 
 _Step 5:_ Click deploy.
 
+{% hint style="info" %}
 
-> Note: No need to change any setting in the last step as `netlify.toml` overwrites these settings.
+Note: No need to change any setting in the last step as `netlify.toml` overwrites these settings.
 
-Now your code will be deployed automatically to netlify on every push to the default branch of your repository.🥳🥳
+{% endhint %}
+
+Now your code will be deployed automatically to Netlify on every push to the default branch of your repository.🥳🥳

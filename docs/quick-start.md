@@ -1,6 +1,6 @@
-# Quickstart
+# QuickStart
 
-**3** easy peasy steps to do :)
+You have just **3** easy-peasy steps to do :)
 
 **1)** Create **CRA** app with the custom template
 
@@ -8,7 +8,7 @@
 npx create-react-app --template cra-template-rb my-app
 ```
 
-**2)** Start the the example application and checkout the features made ready for you.
+**2)** Start the example application and checkout the features made ready for you.
 
 ```shell
 cd my-app
@@ -23,6 +23,6 @@ npm run cleanAndSetup
 
 {% hint style="success" %}
 
-Thats it. As easy as it can be. Happy coding 🎉
+That's it. As easy as it can be. Happy coding! 🎉
 
 {% endhint %}

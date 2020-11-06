@@ -1,12 +1,13 @@
 # FAQ
 
-- [Using global reducers instead of injecting](#load-reducers-optimistically)
-- [Keeping up-to-date with the template](#keeping-up-to-date-with-the-template)
-- [Are there any examples or tutorials?](#examples-and-tutorials)
+- [FAQ](#faq)
+  - [Using reducers optimistically](#using-reducers-optimistically)
+  - [Keeping up-to-date with the template](#keeping-up-to-date-with-the-template)
+  - [Examples & Tutorials](#examples--tutorials)
 
 ## Using reducers optimistically
 
-If you have containers that should be available throughout the app, like a `NavigationBar` (they aren't route specific), you need to add their respective reducers to the root reducer with the help of `combineReducers`.
+If you have containers that should be available throughout the app, like a `NavigationBar` (i.e., they aren't route-specific), you need to add their respective reducers to the root reducer with the help of `combineReducers`.
 
 ```ts
 // In src/store/reducers.ts
@@ -29,8 +30,8 @@ export function createReducer(injectedReducers: InjectedReducersType = {}) {
 
 ## Keeping up-to-date with the template
 
-Eventhough the template is an npm package it's not possible for you to **just update** the package, since you start CRA with this template initially. The suggested way to keep an eye on the [CHANGELOG](../../CHANGELOG.md) file. All the changes that **concerns** the template user will be displayed there, like bug fixes, documentation updates, new features etc... You can check each change's commits and file changes and see what has been changed. Then, the decision is yours if you want to apply those to your code.
+Even though the template is an npm package, it's not possible for you to **just update** the package as you would for a dependency, since you start CRA with this template initially. Instead, it is recommended to keep an eye on the [CHANGELOG](../../CHANGELOG.md) file. All the changes that **concern** the template user will be displayed there, like bug fixes, documentation updates, new features, and so on. You can check each change's commits and file changes to see what has been changed. Then, the decision is yours if you want to apply those to your code.
 
 ## Examples & Tutorials
 
-Take a look our [another 'how to' repo](https://github.com/react-boilerplate/cra-template-examples) for examples and common web app implementations & patterns
+Take a look at our [other 'how-to' repo](https://github.com/react-boilerplate/cra-template-examples) for examples and common web app implementations & patterns.
