@@ -6,3 +6,6 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
 import 'jest-styled-components';
+
+// Init i18n for the tests needing it
+import 'locales/i18n';

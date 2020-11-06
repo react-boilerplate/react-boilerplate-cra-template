@@ -8,7 +8,7 @@ exports[`<App /> should render and match the snapshot 1`] = `
     encodeSpecialCharacters={true}
     htmlAttributes={
       Object {
-        "lang": undefined,
+        "lang": "en-US",
       }
     }
     titleTemplate="%s - React Boilerplate"

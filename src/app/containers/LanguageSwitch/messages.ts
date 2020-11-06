@@ -1,4 +1,4 @@
-import { translations } from 'locales/i18n';
+import { translations } from 'locales/translations';
 import { _t } from 'utils/messages';
 
 export const messages = {

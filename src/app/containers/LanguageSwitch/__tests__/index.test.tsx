@@ -5,7 +5,8 @@ import { ThemeProvider, DefaultTheme } from 'styled-components';
 
 import { LanguageSwitch } from '..';
 import { themes } from 'styles/theme/themes';
-import { i18n, translations } from 'locales/i18n';
+import { i18n } from 'locales/i18n';
+import { translations } from 'locales/translations';
 
 const renderLanguageSwitch = (theme?: DefaultTheme) =>
   render(

@@ -9,11 +9,11 @@ First we have to look at what is happening when react starts its life with `inde
 It is one of the biggest files of the boilerplate. It contains all the global setup to make sure your app runs smoothly. Let's break its contents down:
 
 - `react-app-polyfill` is imported to enable compatibility with many browsers and cool stuff like generator functions, Promises, etc.
-- A redux `store` is instantiated.
-- `ReactDOM.render()` not only renders the [root react component](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/App/index.js) called `<App />`, of your application, but it renders it with `<Provider />`.
-- Hot module replacement is set up via [Webpack HMR](https://webpack.js.org/guides/hot-module-replacement/) that makes all the reducers, injected sagas, components, containers, and i18n messages hot reloadable.
-- i18n internationalization support setup.
-- `<Provider />` connects your app with the redux `store`.
+- A Redux `store` is instantiated.
+- `ReactDOM.render()` not only renders the [root React component](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/App/index.js), called `<App />`, of your application, but it renders it with `<Provider />`.
+- Hot module replacement via [Webpack HMR](https://webpack.js.org/guides/hot-module-replacement/) makes the i18n translations hot reloadable.
+- i18next internationalization support setup.
+- `<Provider />` connects your app with the Redux `store`.
 
 So, all the bootstrapping and setup of the features we are using are being handled here. Here is the summary of the **building blocks**
 
