@@ -13,3 +13,6 @@ The release process is **semi-automated**. The generated changelog requires edit
    - `npm run release`
 6. Publish to npm
    - `npm run publish:npm`
+7. Push the changes to git.
+8. Create release in github by copy pasting the related section from the CHANGELOG.md
+9. There is a `release CI workflow`. Wait for it to be succeeded to see if there any problems with the released version.
