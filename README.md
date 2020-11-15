@@ -66,13 +66,13 @@ Start and check our example app, if you want
 
 ```shell
 cd my-app
-npm start
+yarn start
 ```
 
 Remove the example app to start your project!
 
 ```shell
-npm run cleanAndSetup
+yarn run cleanAndSetup
 ```
 
 ## Features

@@ -12,8 +12,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: npm i # There is a bug with npm ci -> https://github.com/npm/cli/issues/558
-      - run: npm run test:coverage
+      - run: yarn --frozen-lockfile
+      - run: yarn run test:coverage
       - name: Upload to Coveralls
         uses: coverallsapp/github-action@master
         with:
@@ -26,5 +26,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: npm i # There is a bug with npm ci -> https://github.com/npm/cli/issues/558
-      - run: npm run test:internals
+      - run: yarn --frozen-lockfile
+      - run: yarn run test:internals
