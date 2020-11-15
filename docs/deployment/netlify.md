@@ -16,7 +16,7 @@ _Step 1:_ Create a `netlify.toml` file in the root directory of your project and
   publish = "./build"
 
   # Default build command.
-  command = "npm run build"
+  command = "yarn run build"
 
 # The following redirect is intended for use with most SPAs that handle routing internally.
 [[redirects]]

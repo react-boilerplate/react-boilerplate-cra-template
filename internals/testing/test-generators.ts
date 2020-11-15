@@ -31,7 +31,7 @@ const rootStatePath = path.join(process.cwd(), '../../src/types/RootState.ts');
 function runLinting() {
   return new Promise((resolve, reject) => {
     shell.exec(
-      `npm run lint`,
+      `yarn run lint`,
       {
         silent: false, // so that we can see the errors in the console
       },
@@ -43,7 +43,7 @@ function runLinting() {
 function checkTypescript() {
   return new Promise((resolve, reject) => {
     shell.exec(
-      `npm run checkTs`,
+      `yarn run checkTs`,
       {
         silent: false, // so that we can see the errors in the console
       },

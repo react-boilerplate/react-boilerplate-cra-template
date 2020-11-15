@@ -36,35 +36,35 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "// ---TEMPLATE---": "Scripts will be also in the template",
-    "start:prod": "npm run build && serve -s build",
+    "start:prod": "yarn run build && serve -s build",
     "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/test-generators.ts",
     "checkTs": "tsc --noEmit",
     "eslint": "eslint --ext js,ts,tsx",
-    "lint": "npm run eslint -- src",
-    "lint:fix": "npm run eslint -- --fix src",
+    "lint": "yarn run eslint src",
+    "lint:fix": "yarn run eslint --fix src",
     "lint:css": "stylelint src/**/*.css",
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
     "cleanAndSetup": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/clean.ts",
     "prettify": "prettier --write",
     "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
     "// ---TESTING TEMPLATE---": "",
-    "test:internals": "npm run test:extract-messages && npm run test:generators",
+    "test:internals": "yarn run test:extract-messages && yarn run test:generators",
     "test:extract-messages": "jest --config=internals/extractMessages/jest.config.js",
     "verify-startingTemplate-changes": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/verify-startingTemplate-changes.ts",
-    "test:coverage": "npm run test -- --watchAll=false --coverage",
-    "test:cra": "npm run create:cra-app && cd generated-cra-app && npm run test:generators && npm run lint && npm run checkTs && npm run cleanAndSetup && npm run lint && npm run checkTs",
+    "test:coverage": "yarn run test --watchAll=false --coverage",
+    "test:cra": "yarn run create:cra-app && cd generated-cra-app && yarn run test:generators && yarn run lint && yarn run checkTs && yarn run cleanAndSetup && yarn run lint && yarn run checkTs",
     "// ---BUILDING TEMPLATE---": "",
     "create:npm-package": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-npm-package.script.ts",
     "create:cra-app": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-cra-app.script.ts",
     "// ---PUBLISHING---": "",
-    "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' npm run build && gh-pages -d build",
+    "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' yarn run build && gh-pages -d build",
     "changelog": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-changelog.script.ts",
     "release": "standard-version",
-    "publish:npm": "npm run create:npm-package && npm publish .cra-template-rb"
+    "publish:npm": "yarn run create:npm-package && npm publish .cra-template-rb"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npm run eslint -- --fix"
+      "yarn run eslint --fix"
     ],
     "*.{md,json}": [
       "prettier --write"
@@ -72,7 +72,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run checkTs && lint-staged && npm run verify-startingTemplate-changes",
+      "pre-commit": "yarn run checkTs && lint-staged && yarn run verify-startingTemplate-changes",
       "prepare-commit-msg": "devmoji -e",
       "commit-msg": "if git-branch-is dev; then commitlint -E HUSKY_GIT_PARAMS; fi"
     }

@@ -51,7 +51,7 @@ export function crateTemplateFolder(opts: Options = {}) {
   copyToTemplate('tsconfig.json');
   copyToTemplate('README.md');
 
-  // Rename some specific files so they won't be discarded in 'npm pack'
+  // Rename some specific files so they won't be discarded in 'yarn pack'
   shell.mv('template/.gitignore', 'template/gitignore');
   shell.mv('template/.npmrc', 'template/npmrc');
 

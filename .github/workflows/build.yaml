@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: npm i shelljs 
-      - run: npm run create:npm-package
+      - run: yarn add shelljs 
+      - run: yarn run create:npm-package
       - name: Upload template
         uses: actions/upload-artifact@v1
         with:
@@ -36,14 +36,14 @@ jobs:
           path: ../cra-template-rb # Put into the upper folder. create-react-app wants the current directory empty
       - name: Create CRA from downloaded template
         run: npx create-react-app --template file:../cra-template-rb .
-      - run: npm run build
-      - run: npm run test:generators
-      - run: npm run lint
-      - run: npm run checkTs
-      - run: npm run test
-      - run: npm run cleanAndSetup
-      - run: npm run build
-      - run: npm run test:generators
-      - run: npm run lint
-      - run: npm run checkTs
+      - run: yarn run build
+      - run: yarn run test:generators
+      - run: yarn run lint
+      - run: yarn run checkTs
+      - run: yarn run test
+      - run: yarn run cleanAndSetup
+      - run: yarn run build
+      - run: yarn run test:generators
+      - run: yarn run lint
+      - run: yarn run checkTs
 

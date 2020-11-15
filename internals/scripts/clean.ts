@@ -26,7 +26,7 @@ export function cleanAndSetup(opts: Options = {}) {
   shell.rm('-rf', 'internals/startingTemplate');
   shell.rm('-rf', 'internals/scripts');
 
-  shell.exec('npm run prettify -- src/*', { silent: true });
+  shell.exec('yarn run prettify -- src/*', { silent: true });
 
   cleanPackageJsonFile();
 
@@ -41,7 +41,7 @@ function cleanPackageJsonFile() {
   delete packageJson['scripts']['cleanAndSetup'];
 
   fs.writeFileSync('./package.json', JSON.stringify(packageJson));
-  shell.exec('npm run prettify -- package.json', { silent: true });
+  shell.exec('yarn run prettify -- package.json', { silent: true });
 
   try {
     // Remove explanation from husky to enable it
