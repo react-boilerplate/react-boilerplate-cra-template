@@ -2,7 +2,7 @@
  * Component Generator
  */
 
-import { Actions, PlopGenerator } from 'node-plop';
+import { Actions, PlopGeneratorConfig } from 'node-plop';
 import path from 'path';
 
 import { containerExists } from '../utils';
@@ -22,7 +22,7 @@ export enum ContainerProptNames {
 const containersPath = path.join(__dirname, '../../../src/app/containers');
 const rootStatePath = path.join(__dirname, '../../../src/types/RootState.ts');
 
-export const containerGenerator: PlopGenerator = {
+export const containerGenerator: PlopGeneratorConfig = {
   description: 'Add a container component',
   prompts: [
     {

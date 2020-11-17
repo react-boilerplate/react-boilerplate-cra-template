@@ -87,7 +87,7 @@
       "jest-styled-components": "7.0.2",
       "react-test-renderer": "16.13.0",
       "lint-staged": "10.0.8",
-      "node-plop": "0.25.0",
+      "node-plop": "0.26.2",
       "plop": "2.6.0",
       "serve": "11.3.0",
       "shelljs": "0.8.3",

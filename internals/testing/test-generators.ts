@@ -8,9 +8,9 @@ import nodePlop from 'node-plop';
 import { BACKUPFILE_EXTENSION } from '../generators/plopfile';
 import { ComponentProptNames } from '../generators/component';
 import { ContainerProptNames } from '../generators/container';
-import { PlopGenerator as PG } from 'node-plop';
+import { PlopGeneratorConfig as PG } from 'node-plop';
 
-interface PlopGenerator extends PG {
+interface CustomPlopGenerator extends PG {
   runActions?: <T extends string | number>(
     props: { [P in T]: any },
   ) => Promise<{ changes: []; failures: [] }>;
@@ -19,8 +19,12 @@ interface PlopGenerator extends PG {
 process.chdir(path.join(__dirname, '../generators'));
 
 const plop = nodePlop('./plopfile.ts');
-const componentGen = plop.getGenerator('component') as PlopGenerator;
-const containerGen = plop.getGenerator('container') as PlopGenerator;
+const componentGen = (plop.getGenerator(
+  'component',
+) as unknown) as CustomPlopGenerator;
+const containerGen = (plop.getGenerator(
+  'container',
+) as unknown) as CustomPlopGenerator;
 
 const NAMESPACE = 'RbGenerated';
 
