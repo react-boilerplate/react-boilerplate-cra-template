@@ -1,7 +1,7 @@
 {
   "name": "cra-template-rb",
   "description": "The official React Boilerplate template for Create React App",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/react-boilerplate/react-boilerplate-cra-template.git"
@@ -60,7 +60,7 @@
     "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' yarn run build && gh-pages -d build",
     "changelog": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-changelog.script.ts",
     "release": "standard-version",
-    "publish:npm": "yarn run create:npm-package && npm publish .cra-template-rb"
+    "publish:npm": "yarn run create:npm-package && yarn publish .cra-template-rb --non-interactive"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

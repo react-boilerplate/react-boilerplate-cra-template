@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.1](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.2...v1.1.0) (2020-12-02)
+
+### Features
+
+- ✨ added translation JSON files extraction ([#65](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/65)) ([59d5cc4](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/59d5cc4c332a17c8070ef83fd3c7e2b1d10d7bbb))
+- ✨ added .editorconfig ([0423d7c](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/0423d7c13b8802cd1435cff941fe4eeb727a0a49))
+- ✨ added web-vitals from CRA 4.0 ([17c4f97](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/17c4f97f7edc4c64f385962fbe4aea8e07950312))
+- ✨ fast refresh with CRA 4.0 ([bc7ea9c](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/bc7ea9c0bbad5cbe075c5648ad987fad06961ee9))
+
+### Bug Fixes
+
+- 🐛 included .npmrc file in the template which was ignored ([53b28fd](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/53b28fd0a428ca6d53b77e5a44b3d0c73369a4fc))
+- 🐛 setting html lang tag to selected language ([c2e61a2](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/c2e61a2ba49cf6558eb36188d3807a051b312492))
+
+### Internals
+
+**This section only concerns the contributors of this project. You can ignore these changes since they DO NOT create changes in the CRA Template**
+
+<details><summary>Click to see the internal changes</summary>
+
+- **chore:** 📚️ 🔧 review & update ([45c604c](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/45c604c1e5ed7e29dfd0351b3b9c7eaf1cc01a05))
+- 📚️ added release process steps ([f3eb490](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/f3eb490bf9c993b8276e0b7688b8c887b09c2e3e))
+- ♻️ fixing typos, settings and concistency ([c32691c](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/c32691c2dc6819e02d8f43d9054ec50375e7199c))
+- 🔧 maintenance ([#66](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/66)) ([432f449](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/432f4492aa23056e63c721629f274fc8392fd4ba))
+- 🔧 added component folder selection to generators ([#76](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/76)) ([de8e6fd](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/de8e6fd7b8ca4520f2b64c46d4ebd19daf004925))
+- 🔧 switched to yarn ([#89](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/89)) ([2a90e24](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2a90e24b8eaf8adcfb6008f20a2fc4a8f83bfa33))
+</details>
+
 ### [1.0.2](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.1...v1.0.2) (2020-10-27)
 
 Quick patch for cra v4 bug. No changes
