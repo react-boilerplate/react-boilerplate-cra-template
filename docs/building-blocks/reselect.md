@@ -1,12 +1,8 @@
 # Reselect
 
-reselect memoizes ("caches") previous state trees and calculations based on said
-tree. This means repeated changes and calculations are fast and efficient,
-providing us with a performance boost over standard `useSelector`
-implementations.
+`reselect` memoizes ("caches") previous state trees and calculations based upon the said tree. This means repeated changes and calculations are fast and efficient, providing us with a performance boost over standard `useSelector` implementations.
 
-The [official documentation](https://github.com/reactjs/reselect)
-offers a good starting point!
+The [official documentation](https://github.com/reactjs/reselect) offers a good starting point!
 
 ## Usage
 
@@ -14,8 +10,7 @@ There are two different kinds of selectors, simple and complex ones.
 
 ### Simple selectors
 
-Simple selectors are just that: they take the application state and select a
-part of it.
+Simple selectors are just that: they take the application state and select a part of it.
 
 ```ts
 export const mySelector = (state: MyRootState) => state.someState;
@@ -23,9 +18,7 @@ export const mySelector = (state: MyRootState) => state.someState;
 
 ### Complex selectors
 
-If we need to, we can combine simple selectors to build more complex ones which
-get nested state parts with reselect's `createSelector` function. We import other
-selectors and pass them to the `createSelector` call:
+If we need to, we can combine simple selectors to build more complex ones which get nested state parts with `reselect`'s `createSelector` function. We import other selectors and pass them to the `createSelector` call:
 
 #### `selectors.ts`
 
@@ -61,6 +54,6 @@ export function HomePage() {
 
 {% hint style="info" %}
 
-🎉 **Good News:** You don't need to write this boilerplate code by hand, the `container` generator will generate it for you ✓
+🎉 **Good News:** You don't need to write this boilerplate code by hand, the `container` generator will generate it for you. ✓
 
 {% endhint %}

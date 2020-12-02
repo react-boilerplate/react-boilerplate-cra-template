@@ -1,7 +1,7 @@
 ‌# Summary​
 
 - [Quick Start](quick-start.md)
-- [Understading react-boilerplate](understanding-react-boilerplate.md)
+- [Understanding `react-boilerplate`](understanding-react-boilerplate.md)
 
 ## Tools
 
@@ -13,7 +13,7 @@
 - [Building Blocks](building-blocks/README.md)
 - [Redux & Toolkit](building-blocks/redux-toolkit.md)
 - [Reselect](building-blocks/reselect.md)
-- [Redux Saga](building-blocks/redux-saga.md)
+- [Redux-Saga](building-blocks/redux-saga.md)
 - [Redux Injectors](building-blocks/redux-injectors.md)
 - [Async Components](building-blocks/async-components.md)
 - [Routing](building-blocks/routing.md)

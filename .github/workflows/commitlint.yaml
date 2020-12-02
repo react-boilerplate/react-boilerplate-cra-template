@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - run: npm i @commitlint/config-conventional
+      - run: yarn add @commitlint/config-conventional
       - uses: JulienKode/pull-request-name-linter-action@v0.1.2
   lint-commits:
     # Only if we are pushing or merging PR to the master
@@ -27,5 +27,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 30 # Its fine to lint last 30 commits only
-      - run: npm i @commitlint/config-conventional
+      - run: yarn add @commitlint/config-conventional
       - uses: wagoid/commitlint-github-action@v1

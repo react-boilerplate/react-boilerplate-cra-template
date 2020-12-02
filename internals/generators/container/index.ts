@@ -1,8 +1,8 @@
 /**
- * Component Generator
+ * Container Generator
  */
 
-import { Actions, PlopGenerator } from 'node-plop';
+import { Actions, PlopGeneratorConfig } from 'node-plop';
 import path from 'path';
 
 import { containerExists } from '../utils';
@@ -22,7 +22,7 @@ export enum ContainerProptNames {
 const containersPath = path.join(__dirname, '../../../src/app/containers');
 const rootStatePath = path.join(__dirname, '../../../src/types/RootState.ts');
 
-export const containerGenerator: PlopGenerator = {
+export const containerGenerator: PlopGeneratorConfig = {
   description: 'Add a container component',
   prompts: [
     {
@@ -159,6 +159,15 @@ export const containerGenerator: PlopGenerator = {
         type: 'add',
         path: `${containerPath}/__tests__/index.test.tsx`,
         templateFile: './container/index.test.tsx.hbs',
+        abortOnFail: true,
+      });
+    }
+
+    if (data.wantTranslations) {
+      actions.push({
+        type: 'add',
+        path: `${containerPath}/messages.ts`,
+        templateFile: './container/messages.ts.hbs',
         abortOnFail: true,
       });
     }

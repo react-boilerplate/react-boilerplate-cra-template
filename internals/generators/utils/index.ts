@@ -20,3 +20,23 @@ export function containerExists(container: string) {
   );
   return containers.indexOf(container) >= 0;
 }
+
+function walkDir(directory: string) {
+  let dirList: string[] = [];
+
+  const files = fs.readdirSync(directory);
+  for (const file of files) {
+    const p = path.join(directory, file);
+    if (fs.statSync(p).isDirectory()) {
+      dirList.push(p);
+      dirList = [...dirList, ...walkDir(p)];
+    }
+  }
+  return dirList;
+}
+
+export function listComponentsDirectories() {
+  // Not using path.join(__dirname,) as it give really long name when listed
+  const sourceDir = 'src/';
+  return walkDir(sourceDir).filter(dirPath => dirPath.match(/components$/));
+}

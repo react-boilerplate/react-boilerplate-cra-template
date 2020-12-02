@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Masthead } from '../Masthead';
 import { createRenderer } from 'react-test-renderer/shallow';
 

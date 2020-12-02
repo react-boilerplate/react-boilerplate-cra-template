@@ -2,22 +2,22 @@
  * Component Generator
  */
 
-import { Actions, PlopGenerator } from 'node-plop';
+import { Actions, PlopGeneratorConfig } from 'node-plop';
 import path from 'path';
 
-import { componentExists } from '../utils';
+import { componentExists, listComponentsDirectories } from '../utils';
 
 export enum ComponentProptNames {
   'ComponentName' = 'ComponentName',
+  'componentPath' = 'componentPath',
   'wantMemo' = 'wantMemo',
   'wantStyledComponents' = 'wantStyledComponents',
   'wantTranslations' = 'wantTranslations',
   'wantLoadable' = 'wantLoadable',
   'wantTests' = 'wantTests',
 }
-const componentsPath = path.join(__dirname, '../../../src/app/components');
 
-export const componentGenerator: PlopGenerator = {
+export const componentGenerator: PlopGeneratorConfig = {
   description: 'Add an unconnected component',
   prompts: [
     {
@@ -34,6 +34,12 @@ export const componentGenerator: PlopGenerator = {
 
         return 'The name is required';
       },
+    },
+    {
+      type: 'list',
+      name: ComponentProptNames.componentPath,
+      message: 'Where should it be created ?',
+      choices: listComponentsDirectories(),
     },
     {
       type: 'confirm',
@@ -68,12 +74,16 @@ export const componentGenerator: PlopGenerator = {
     },
   ],
   actions: (data: { [P in ComponentProptNames]: string }) => {
-    const containerPath = `${componentsPath}/{{properCase ${ComponentProptNames.ComponentName}}}`;
+    const componentPath = `${path.join(
+      __dirname,
+      '../../../',
+      data.componentPath,
+    )}/{{properCase ${ComponentProptNames.ComponentName}}}`;
 
     const actions: Actions = [
       {
         type: 'add',
-        path: `${containerPath}/index.tsx`,
+        path: `${componentPath}/index.tsx`,
         templateFile: './component/index.tsx.hbs',
         abortOnFail: true,
       },
@@ -82,7 +92,7 @@ export const componentGenerator: PlopGenerator = {
     if (data.wantLoadable) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/Loadable.ts`,
+        path: `${componentPath}/Loadable.ts`,
         templateFile: './component/loadable.ts.hbs',
         abortOnFail: true,
       });
@@ -91,15 +101,24 @@ export const componentGenerator: PlopGenerator = {
     if (data.wantTests) {
       actions.push({
         type: 'add',
-        path: `${containerPath}/__tests__/index.test.tsx`,
+        path: `${componentPath}/__tests__/index.test.tsx`,
         templateFile: './component/index.test.tsx.hbs',
+        abortOnFail: true,
+      });
+    }
+
+    if (data.wantTranslations) {
+      actions.push({
+        type: 'add',
+        path: `${componentPath}/messages.ts`,
+        templateFile: './component/messages.ts.hbs',
         abortOnFail: true,
       });
     }
 
     actions.push({
       type: 'prettify',
-      data: { path: `${componentsPath}/${data.ComponentName}/**` },
+      data: { path: `${data.componentPath}/${data.ComponentName}/**` },
     });
 
     return actions;

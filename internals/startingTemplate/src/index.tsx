@@ -12,6 +12,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from 'serviceWorker';
+
+// Use consistent styling
 import 'sanitize.css/sanitize.css';
 
 // Import root app
@@ -27,34 +29,23 @@ import './locales/i18n';
 const store = configureAppStore();
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 
-interface Props {
-  Component: typeof App;
-}
-const ConnectedApp = ({ Component }: Props) => (
+ReactDOM.render(
   <Provider store={store}>
     <HelmetProvider>
       <React.StrictMode>
-        <Component />
+        <App />
       </React.StrictMode>
     </HelmetProvider>
-  </Provider>
+  </Provider>,
+  MOUNT_NODE,
 );
-const render = (Component: typeof App) => {
-  ReactDOM.render(<ConnectedApp Component={Component} />, MOUNT_NODE);
-};
 
+// Hot reloadable translation json files
 if (module.hot) {
-  // Hot reloadable translation json files and app
-  // modules.hot.accept does not accept dynamic dependencies,
-  // have to be constants at compile-time
-  module.hot.accept(['./app', './locales/i18n'], () => {
-    ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-    const App = require('./app').App;
-    render(App);
+  module.hot.accept(['./locales/i18n'], () => {
+    // No need to render the App again because i18next works with the hooks
   });
 }
-
-render(App);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

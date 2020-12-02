@@ -37,6 +37,7 @@ export function GithubRepoForm() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(effect, []);
   };
+
   useEffectOnMount(() => {
     // When initial state username is not null, submit the form to load repos
     if (username && username.trim().length > 0) {

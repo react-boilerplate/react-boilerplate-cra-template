@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Logos } from '../Logos';
 import { render } from '@testing-library/react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';

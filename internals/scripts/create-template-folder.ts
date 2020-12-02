@@ -22,6 +22,10 @@ export function crateTemplateFolder(opts: Options = {}) {
   shell.mkdir('template/internals');
   copyToTemplate('internals/generators', true);
 
+  shell.mkdir('template/internals/extractMessages');
+  copyToTemplate('internals/extractMessages/i18next-scanner.config.js');
+  copyToTemplate('internals/extractMessages/stringfyTranslations.js');
+
   shell.mkdir('template/internals/scripts');
   copyToTemplate('internals/scripts/clean.ts');
 
@@ -47,7 +51,9 @@ export function crateTemplateFolder(opts: Options = {}) {
   copyToTemplate('tsconfig.json');
   copyToTemplate('README.md');
 
+  // Rename some specific files so they won't be discarded in 'yarn pack'
   shell.mv('template/.gitignore', 'template/gitignore');
+  shell.mv('template/.npmrc', 'template/npmrc');
 
   if (abortOnFailEnabled) shellDisableAbortOnFail();
 }

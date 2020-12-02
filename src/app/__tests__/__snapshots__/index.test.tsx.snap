@@ -6,6 +6,11 @@ exports[`<App /> should render and match the snapshot 1`] = `
     defaultTitle="React Boilerplate"
     defer={true}
     encodeSpecialCharacters={true}
+    htmlAttributes={
+      Object {
+        "lang": "en-US",
+      }
+    }
     titleTemplate="%s - React Boilerplate"
   >
     <meta

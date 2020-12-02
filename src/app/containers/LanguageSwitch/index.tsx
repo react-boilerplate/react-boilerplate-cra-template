@@ -1,20 +1,20 @@
-import React from 'react';
+import * as React from 'react';
 import { FormLabel } from 'app/components/FormLabel';
 import { Radio } from 'app/components/Radio';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
-import { translations, LanguageKey } from 'locales/i18n';
+import { messages } from './messages';
 
 export function LanguageSwitch() {
   const { t, i18n } = useTranslation();
   const handleLanguageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const language = event.target.value as LanguageKey;
+    const language = event.target.value;
     i18n.changeLanguage(language);
   };
 
   return (
     <Wrapper>
-      <FormLabel>{t(translations.i18nFeature.selectLanguage)}</FormLabel>
+      <FormLabel>{t(...messages.selectLanguage)}</FormLabel>
       <Languages>
         <Radio
           id="en"
