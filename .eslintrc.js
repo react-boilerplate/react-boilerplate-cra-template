@@ -17,7 +17,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.tsx'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
       },
     },
   },
@@ -29,6 +29,8 @@ module.exports = {
       {
         ts: 'never',
         tsx: 'never',
+        js: 'never',
+        jsx: 'never',
       },
     ],
     'no-use-before-define': 'off',
