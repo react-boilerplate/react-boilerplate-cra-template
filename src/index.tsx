@@ -8,22 +8,20 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import FontFaceObserver from 'fontfaceobserver';
-import * as serviceWorker from 'serviceWorker';
+import { HelmetProvider } from 'react-helmet-async';
+import * as serviceWorker from './serviceWorker';
 
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
 
-import { App } from 'app';
+import { configureAppStore } from './store/configureStore';
 
-import { HelmetProvider } from 'react-helmet-async';
-
-import { configureAppStore } from 'store/configureStore';
-
-import { ThemeProvider } from 'styles/theme/ThemeProvider';
+import { ThemeProvider } from './styles/theme/ThemeProvider';
+import App from './app';
 
 // Initialize languages
 import './locales/i18n';
