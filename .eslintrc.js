@@ -14,8 +14,23 @@ module.exports = {
     'prettier/react',
   ],
   plugins: ['prettier'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.ts', '.tsx'],
+      },
+    },
+  },
   rules: {
     'prettier/prettier': ['error', prettierOptions],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
   overrides: [
     {
