@@ -13,7 +13,7 @@ describe('extracting messages', () => {
 
   it('extract object with default values', () => {
     const content = `
-      import { translations } from 'locales/i18n';
+      import { translations } from 'locales/translations';
       export const messages = {
         x: _t(translations.a),
         x: _t(translations.a.k1),
@@ -30,7 +30,7 @@ describe('extracting messages', () => {
 
   it('extract strings with default values', () => {
     const content = `
-      import { translations } from 'locales/i18n';
+      import { translations } from 'locales/translations';
       export const messages = {
         x: _t("a"),
         x: _t("a.k1"),
@@ -47,7 +47,7 @@ describe('extracting messages', () => {
 
   it('extract nested objects', () => {
     const content = `
-      import { translations } from 'locales/i18n';
+      import { translations } from 'locales/translations';
       const m = translations.a;
       export const messages = {
         x: _t(m.k1),
