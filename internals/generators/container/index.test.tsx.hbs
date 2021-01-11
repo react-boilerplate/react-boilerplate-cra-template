@@ -37,7 +37,7 @@ const renderComponent = () =>
 describe('<{{ properCase ComponentName }} />', () => {
   {{#if wantSlice}}
   let store: ReturnType<typeof configureAppStore>;
-  
+
   beforeEach(() => {
     store = configureAppStore();
   });
