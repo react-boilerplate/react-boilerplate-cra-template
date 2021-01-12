@@ -3,6 +3,19 @@ import { render } from '@testing-library/react';
 
 import { {{ properCase ComponentName }} } from '..';
 
+{{#if wantTranslations}}
+jest.mock('react-i18next', () => ({
+  useTranslation: () => {
+    return {
+      t: str => str,
+      i18n: {
+        changeLanguage: () => new Promise(() => {}),
+      },
+    };
+  },
+}));
+{{/if}}
+
 describe('<{{ properCase ComponentName }}  />', () => {
   it('should match snapshot', () => {
     const loadingIndicator = render(<{{ properCase ComponentName }} />);
