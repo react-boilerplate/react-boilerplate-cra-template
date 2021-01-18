@@ -27,7 +27,7 @@ describe('<LanguageSwitch />', () => {
 
     let languageSwitch = renderLanguageSwitch();
     let label = languageSwitch.queryByText(
-      t(translations.i18nFeature.selectLanguage),
+      t(translations.i18nFeature.selectLanguage) as string,
     );
     expect(label).toBeInTheDocument();
 
@@ -36,7 +36,7 @@ describe('<LanguageSwitch />', () => {
 
     languageSwitch = renderLanguageSwitch();
     label = languageSwitch.queryByText(
-      t(translations.i18nFeature.selectLanguage),
+      t(translations.i18nFeature.selectLanguage) as string,
     );
     expect(label).toBeInTheDocument();
   });
