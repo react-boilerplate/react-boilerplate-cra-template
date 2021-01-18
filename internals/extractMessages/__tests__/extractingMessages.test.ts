@@ -15,10 +15,10 @@ describe('extracting messages', () => {
     const content = `
       import { translations } from 'locales/translations';
       export const messages = {
-        x: _t(translations.a),
-        x: _t(translations.a.k1),
-        x: _t(translations.a.k2, "v1"),
-        x: _t(translations.a.k3, "v1", {a: "b"}),
+        x: () => _t(translations.a),
+        x: () => _t(translations.a.k1),
+        x: () => _t(translations.a.k2, "v1"),
+        x: () => _t(translations.a.k3, "v1", {a: "b"}),
       };
     `;
     scannerConfig.parseContent(content, parser);
@@ -32,10 +32,10 @@ describe('extracting messages', () => {
     const content = `
       import { translations } from 'locales/translations';
       export const messages = {
-        x: _t("a"),
-        x: _t("a.k1"),
-        x: _t("a.k2", "v1"),
-        x: _t("a.k3", "v1", {a: "b"}),
+        x: () => _t("a"),
+        x: () => _t("a.k1"),
+        x: () => _t("a.k2", "v1"),
+        x: () => _t("a.k3", "v1", {a: "b"}),
       };
     `;
     scannerConfig.parseContent(content, parser);
@@ -50,8 +50,8 @@ describe('extracting messages', () => {
       import { translations } from 'locales/translations';
       const m = translations.a;
       export const messages = {
-        x: _t(m.k1),
-        x: _t(m.k2, "v1"),
+        x: () => _t(m.k1),
+        x: () => _t(m.k2, "v1"),
       };
     `;
     scannerConfig.parseContent(content, parser);

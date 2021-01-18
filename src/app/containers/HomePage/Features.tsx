@@ -82,9 +82,9 @@ export function Features() {
         <Feature>
           <INTLIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(messages.i18nTitle)} </SubTitle>
+            <SubTitle>{t(messages.i18nTitle())} </SubTitle>
             <P>
-              {t(messages.i18nDescription)}
+              {t(messages.i18nDescription())}
               <br />
               <small>
                 (Only some of the features below are translated to demonstrate
@@ -97,9 +97,9 @@ export function Features() {
         <Feature>
           <RouteIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(...messages.routingTitle)}</SubTitle>
+            <SubTitle>{t(...messages.routingTitle())}</SubTitle>
             <P>
-              {t(messages.routingDescription)}
+              {t(messages.routingDescription())}
               <br />
               <small>
                 Go to our{' '}
@@ -112,15 +112,15 @@ export function Features() {
         <Feature>
           <InstantFeedbackIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(messages.feedbackTitle)}</SubTitle>
-            <P>{t(messages.feedbackDescription)}</P>
+            <SubTitle>{t(messages.feedbackTitle())}</SubTitle>
+            <P>{t(messages.feedbackDescription())}</P>
           </Content>
         </Feature>
         <Feature>
           <ScaffoldingIcon className="feature-icon" />
           <Content>
-            <SubTitle>{t(messages.scaffoldingTitle)}</SubTitle>
-            <P>{t(messages.scaffoldingDescription)}</P>
+            <SubTitle>{t(messages.scaffoldingTitle())}</SubTitle>
+            <P>{t(messages.scaffoldingDescription())}</P>
           </Content>
         </Feature>
         <Feature>

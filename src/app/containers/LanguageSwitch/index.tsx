@@ -14,7 +14,7 @@ export function LanguageSwitch() {
 
   return (
     <Wrapper>
-      <FormLabel>{t(...messages.selectLanguage)}</FormLabel>
+      <FormLabel>{t(...messages.selectLanguage())}</FormLabel>
       <Languages>
         <Radio
           id="en"
