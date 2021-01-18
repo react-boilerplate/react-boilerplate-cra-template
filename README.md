@@ -45,8 +45,6 @@ Start your `create-react-app` projects in seconds with the best, industry-standa
 
 **🎨 Check the example app:** [Boilerplate Example Application](https://react-boilerplate.github.io/react-boilerplate-cra-template/)
 
-**🚑 Collection of `'HOW TO'`s:** [Examples & Tutorials for common patterns](https://github.com/react-boilerplate/cra-template-examples)
-
 **📦 Package:** [npm](https://www.npmjs.com/package/cra-template-rb)
 
 ![version](https://img.shields.io/npm/v/cra-template-rb)
