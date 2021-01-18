@@ -85,8 +85,7 @@
       "!src/**/*/messages.ts",
       "!src/reportWebVitals.ts",
       "!src/**/*/types.ts",
-      "!src/index.tsx",
-      "!src/serviceWorker.ts"
+      "!src/index.tsx"
     ],
     "coverageThreshold": {
       "global": {

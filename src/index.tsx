@@ -12,7 +12,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import FontFaceObserver from 'fontfaceobserver';
-import * as serviceWorker from 'serviceWorker';
 
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
@@ -59,8 +58,3 @@ if (module.hot) {
     // No need to render the App again because i18next works with the hooks
   });
 }
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

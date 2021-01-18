@@ -16,7 +16,6 @@ import { ReactComponent as RouteIcon } from './assets/route.svg';
 import { ReactComponent as SEOIcon } from './assets/seo.svg';
 import { ReactComponent as InstantFeedbackIcon } from './assets/instant-feedback.svg';
 import { ReactComponent as ScaffoldingIcon } from './assets/scaffolding.svg';
-import { ReactComponent as OfflineFirstIcon } from './assets/offline-first.svg';
 import { ReactComponent as CodeAnalysisIcon } from './assets/code-analysis.svg';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'app/components/Link';
@@ -141,16 +140,6 @@ export function Features() {
               Typescript is the key to scalability. Build self-documented code,
               easy-to-debug code and create maintainable large applications and
               codebases with a highly productive development experience.
-            </P>
-          </Content>
-        </Feature>
-        <Feature>
-          <OfflineFirstIcon className="feature-icon" />
-          <Content>
-            <SubTitle>Offline-First</SubTitle>
-            <P>
-              The next frontier in performant web apps: availability without a
-              network connection from the instant your users load the app.
             </P>
           </Content>
         </Feature>

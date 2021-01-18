@@ -178,19 +178,6 @@ exports[`<Features /> should render with de translations 1`] = `
       </Features__Content>
     </Features__Feature>
     <Features__Feature>
-      <ForwardRef(SvgOfflineFirst)
-        className="feature-icon"
-      />
-      <Features__Content>
-        <SubTitle>
-          Offline-First
-        </SubTitle>
-        <P>
-          The next frontier in performant web apps: availability without a network connection from the instant your users load the app.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
       <ForwardRef(SvgCodeAnalysis)
         className="feature-icon"
       />
@@ -381,19 +368,6 @@ exports[`<Features /> should render with en translations 1`] = `
         </SubTitle>
         <P>
           Typescript is the key to scalability. Build self-documented code, easy-to-debug code and create maintainable large applications and codebases with a highly productive development experience.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
-      <ForwardRef(SvgOfflineFirst)
-        className="feature-icon"
-      />
-      <Features__Content>
-        <SubTitle>
-          Offline-First
-        </SubTitle>
-        <P>
-          The next frontier in performant web apps: availability without a network connection from the instant your users load the app.
         </P>
       </Features__Content>
     </Features__Feature>
