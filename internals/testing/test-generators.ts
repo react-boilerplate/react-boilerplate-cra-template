@@ -29,7 +29,7 @@ const containersPath = path.join(process.cwd(), '../../src/app/containers');
 const rootStatePath = path.join(process.cwd(), '../../src/types/RootState.ts');
 
 function runLinting() {
-  return new Promise((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
     shell.exec(
       `yarn run lint`,
       {
@@ -41,7 +41,7 @@ function runLinting() {
 }
 
 function checkTypescript() {
-  return new Promise((resolve, reject) => {
+  return new Promise<void>((resolve, reject) => {
     shell.exec(
       `yarn run checkTs`,
       {
