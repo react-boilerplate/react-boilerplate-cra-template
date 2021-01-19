@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { {{ properCase ComponentName }} } from '..';
+import { {{ properCase componentName }} } from '..';
 
 {{#if wantTranslations}}
 jest.mock('react-i18next', () => ({
@@ -16,9 +16,9 @@ jest.mock('react-i18next', () => ({
 }));
 {{/if}}
 
-describe('<{{ properCase ComponentName }}  />', () => {
+describe('<{{ properCase componentName }}  />', () => {
   it('should match snapshot', () => {
-    const loadingIndicator = render(<{{ properCase ComponentName }} />);
+    const loadingIndicator = render(<{{ properCase componentName }} />);
     expect(loadingIndicator.container.firstChild).toMatchSnapshot();
   });
 });
