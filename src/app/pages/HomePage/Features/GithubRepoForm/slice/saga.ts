@@ -1,7 +1,7 @@
 import { call, put, select, takeLatest, delay } from 'redux-saga/effects';
 import { request } from 'utils/request';
 import { selectUsername } from './selectors';
-import { actions } from './slice';
+import { githubRepoFormActions as actions } from '.';
 import { Repo } from 'types/Repo';
 import { RepoErrorType } from './types';
 

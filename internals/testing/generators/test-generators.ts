@@ -10,7 +10,7 @@ import { rootStatePath, SliceProptNames } from '../../generators/slice';
 import { PlopGenerator as PG } from 'node-plop';
 import { componentVariations } from './componentVariations';
 import { sliceVariations } from './sliceVariations';
-import { baseGeneratorPath } from '../../generators/plopfile';
+import { baseGeneratorPath } from '../../generators/paths';
 
 interface PlopGenerator extends PG {
   runActions: <T extends string | number>(

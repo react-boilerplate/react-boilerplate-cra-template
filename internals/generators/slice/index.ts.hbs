@@ -25,5 +25,5 @@ export const use{{ properCase sliceName }}Slice = () => {
   {{#if wantSaga}}
   useInjectSaga({ key: slice.name, saga: {{ camelCase sliceName }}Saga });
   {{/if}}
-  return { {{ camelCase sliceName }}Actions: slice.actions };
+  return { actions: slice.actions };
 };

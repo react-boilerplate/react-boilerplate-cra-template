@@ -6,12 +6,12 @@ import { ThemeProvider } from 'styles/theme/ThemeProvider';
 import { HelmetProvider } from 'react-helmet-async';
 import { GithubRepoForm, repoErrorText } from '..';
 import { configureAppStore } from 'store/configureStore';
-import { actions, initialState } from '../slice';
-import { RepoErrorType } from '../types';
+import { githubRepoFormActions as actions, initialState } from '../slice';
+import { RepoErrorType } from '../slice/types';
 
 function* mockGithubRepoFormSaga() {}
 
-jest.mock('../saga', () => ({
+jest.mock('../slice/saga', () => ({
   githubRepoFormSaga: mockGithubRepoFormSaga,
 }));
 

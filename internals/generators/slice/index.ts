@@ -7,7 +7,7 @@ import path from 'path';
 import inquirer from 'inquirer';
 
 import { pathExists } from '../utils';
-import { baseGeneratorPath } from '../plopfile';
+import { baseGeneratorPath } from '../paths';
 
 inquirer.registerPrompt('directory', require('inquirer-directory'));
 

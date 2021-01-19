@@ -1,5 +1,5 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import * as slice from '../slice';
+import * as slice from '..';
 
 import { githubRepoFormSaga, getRepos } from '../saga';
 import { RepoErrorType } from '../types';
@@ -24,7 +24,7 @@ describe('getRepos Saga', () => {
     username = '';
     const putDescriptor = getReposIterator.next(username).value;
     expect(putDescriptor).toEqual(
-      put(slice.actions.repoError(RepoErrorType.USERNAME_EMPTY)),
+      put(slice.githubRepoFormActions.repoError(RepoErrorType.USERNAME_EMPTY)),
     );
 
     const iteration = getReposIterator.next();
@@ -46,7 +46,9 @@ describe('getRepos Saga', () => {
     expect(requestDescriptor).toMatchSnapshot();
 
     const putDescriptor = getReposIterator.next(repos).value;
-    expect(putDescriptor).toEqual(put(slice.actions.reposLoaded(repos)));
+    expect(putDescriptor).toEqual(
+      put(slice.githubRepoFormActions.reposLoaded(repos)),
+    );
   });
 
   it('should dispatch the user not found error', () => {
@@ -58,7 +60,7 @@ describe('getRepos Saga', () => {
     const putDescriptor = getReposIterator.throw({ response: { status: 404 } })
       .value;
     expect(putDescriptor).toEqual(
-      put(slice.actions.repoError(RepoErrorType.USER_NOT_FOUND)),
+      put(slice.githubRepoFormActions.repoError(RepoErrorType.USER_NOT_FOUND)),
     );
   });
   it('should dispatch the user has no repo error', () => {
@@ -70,7 +72,9 @@ describe('getRepos Saga', () => {
 
     const putDescriptor = getReposIterator.next(repos).value;
     expect(putDescriptor).toEqual(
-      put(slice.actions.repoError(RepoErrorType.USER_HAS_NO_REPO)),
+      put(
+        slice.githubRepoFormActions.repoError(RepoErrorType.USER_HAS_NO_REPO),
+      ),
     );
   });
   it('should dispatch the github rate limit error', () => {
@@ -82,7 +86,9 @@ describe('getRepos Saga', () => {
     const putDescriptor = getReposIterator.throw(new Error('Failed to fetch'))
       .value;
     expect(putDescriptor).toEqual(
-      put(slice.actions.repoError(RepoErrorType.GITHUB_RATE_LIMIT)),
+      put(
+        slice.githubRepoFormActions.repoError(RepoErrorType.GITHUB_RATE_LIMIT),
+      ),
     );
   });
 
@@ -94,7 +100,7 @@ describe('getRepos Saga', () => {
 
     const putDescriptor = getReposIterator.throw(new Error('some error')).value;
     expect(putDescriptor).toEqual(
-      put(slice.actions.repoError(RepoErrorType.RESPONSE_ERROR)),
+      put(slice.githubRepoFormActions.repoError(RepoErrorType.RESPONSE_ERROR)),
     );
   });
 });
@@ -104,7 +110,7 @@ describe('githubRepoFormSaga Saga', () => {
   it('should start task to watch for loadRepos action', () => {
     const takeLatestDescriptor = githubRepoFormIterator.next().value;
     expect(takeLatestDescriptor).toEqual(
-      takeLatest(slice.actions.loadRepos.type, getRepos),
+      takeLatest(slice.githubRepoFormActions.loadRepos.type, getRepos),
     );
   });
 });

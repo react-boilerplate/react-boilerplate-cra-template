@@ -2,10 +2,11 @@ import * as React from 'react';
 import { FormLabel } from 'app/components/FormLabel';
 import { Radio } from 'app/components/Radio';
 import styled from 'styled-components/macro';
-import { changeTheme, selectThemeKey } from 'styles/theme/slice';
+import { themeActions } from 'styles/theme/slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveTheme } from 'styles/theme/utils';
-import { ThemeKeyType } from 'styles/theme/types';
+import { ThemeKeyType } from 'styles/theme/slice/types';
+import { selectThemeKey } from 'styles/theme/slice/selectors';
 
 export function ThemeSwitch() {
   const theme = useSelector(selectThemeKey);
@@ -14,7 +15,7 @@ export function ThemeSwitch() {
   const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value as ThemeKeyType;
     saveTheme(value);
-    dispatch(changeTheme(value));
+    dispatch(themeActions.changeTheme(value));
   };
 
   return (

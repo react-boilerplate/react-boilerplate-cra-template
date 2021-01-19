@@ -1,25 +1,22 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components/macro';
 import { useSelector, useDispatch } from 'react-redux';
-import { useInjectReducer, useInjectSaga } from 'utils/redux-injectors';
 import { FormLabel } from 'app/components/FormLabel';
 import { Input } from './components/Input';
 import { RepoItem } from './RepoItem';
 import { TextButton } from './components/TextButton';
-import { sliceKey, reducer, actions } from './slice';
-import { githubRepoFormSaga } from './saga';
 import {
   selectUsername,
   selectRepos,
   selectLoading,
   selectError,
-} from './selectors';
+} from './slice/selectors';
 import { LoadingIndicator } from 'app/components/LoadingIndicator';
-import { RepoErrorType } from './types';
+import { RepoErrorType } from './slice/types';
+import { useGithubRepoFormSlice } from './slice';
 
 export function GithubRepoForm() {
-  useInjectReducer({ key: sliceKey, reducer: reducer });
-  useInjectSaga({ key: sliceKey, saga: githubRepoFormSaga });
+  const { actions } = useGithubRepoFormSlice();
 
   const username = useSelector(selectUsername);
   const repos = useSelector(selectRepos);

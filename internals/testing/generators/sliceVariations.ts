@@ -18,7 +18,7 @@ export const sliceVariations = (): SliceVariationType => {
     },
     {
       sliceName: `${sliceNameBase}3`,
-      path: `/pages/HomePage/Features/GithubRepoForm`,
+      path: `/pages/HomePage/Features`,
       wantSaga: true,
     },
   ];
