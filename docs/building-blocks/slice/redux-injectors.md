@@ -13,12 +13,15 @@ import {
   SagaInjectionModes,
 } from 'utils/redux-injectors';
 import { saga } from './saga';
-import { reducer } from './slice';
+import { reducer } from '.';
 
-export function NewContainer() {
-  useInjectReducer({ key: 'newContainer', reducer });
-  useInjectSaga({ key: 'newContainer', saga, mode: SagaInjectionModes.DAEMON });
-
+export function SomeComponent() {
+  useInjectReducer({ key: 'SomeComponent', reducer });
+  useInjectSaga({
+    key: 'SomeComponent',
+    saga,
+    mode: SagaInjectionModes.DAEMON,
+  });
   // ...
 }
 ```

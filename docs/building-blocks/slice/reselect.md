@@ -20,7 +20,7 @@ export const mySelector = (state: MyRootState) => state.someState;
 
 If we need to, we can combine simple selectors to build more complex ones which get nested state parts with `reselect`'s `createSelector` function. We import other selectors and pass them to the `createSelector` call:
 
-#### `selectors.ts`
+#### `.../slice/selectors.ts`
 
 ```ts
 import { createSelector } from '@reduxjs/toolkit';
@@ -36,14 +36,14 @@ const myComplexSelector = createSelector(
 export { myComplexSelector };
 ```
 
-### Using your selectors in containers
+### Using your selectors in components
 
 #### `index.tsx`
 
 ```ts
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { selectUsername } from './selectors';
+import { selectUsername } from './slice/selectors';
 
 export function HomePage() {
   // Type of the `username` will be inferred  ✅
@@ -54,6 +54,6 @@ export function HomePage() {
 
 {% hint style="info" %}
 
-🎉 **Good News:** You don't need to write this boilerplate code by hand, the `container` generator will generate it for you. ✓
+🎉 **Good News:** You don't need to write this boilerplate code by hand, the `slice` generator will generate it for you. ✓
 
 {% endhint %}

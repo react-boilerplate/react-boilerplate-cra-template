@@ -12,13 +12,13 @@ To learn more about this amazing way to handle concurrent flows, start with the 
 
 ## Usage
 
-Sagas are associated with a container, just like `slice`. If your container already has a `saga.ts` file, simply add your saga to that. If your container does not yet have a `saga.ts` file, add one with this boilerplate structure:
+Sagas are associated with a slice. If your slice already has a `saga.ts` file, simply add your saga to that. If your slice does not yet have a `saga.ts` file, add one with this boilerplate structure:
 
-#### `saga.ts`
+#### `.../slice/saga.ts`
 
 ```ts
 import { takeLatest, call, put, select } from 'redux-saga/effects';
-import { actions } from './slice';
+import { homepageActions } from '.';
 
 // Root saga
 export default function* homepageSaga() {
@@ -30,22 +30,20 @@ export default function* homepageSaga() {
 }
 ```
 
-### Using your saga in containers
+### Using your saga in components
 
-Once you have a saga in your container, [`useInjectSaga`](https://github.com/react-boilerplate/redux-injectors/blob/master/docs/api.md#useinjectsaga) from `redux-injectors` will inject the root saga. In your `index.tsx`:
+Once you have a saga in your slice, [`useInjectSaga`](https://github.com/react-boilerplate/redux-injectors/blob/master/docs/api.md#useinjectsaga) from `redux-injectors` will inject the root saga.
+
+#### `.../slice/index.ts`
 
 ```ts
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// More type-safe ✅
-import { useInjectSaga } from 'utils/redux-injectors';
-import { sliceKey } from './slice';
+// ... code from above
 
-export function HomePage() {
-  // Inject your saga to Redux
+export const useHomepageSlice = () => {
+  useInjectReducer({ key: slice.name, reducer: slice.reducer });
   useInjectSaga({ key: sliceKey, saga: homepageSaga });
-  // ...
-}
+  return { actions: slice.actions };
+};
 ```
 
 A `mode` argument can be one of three constants (import the enum `SagaInjectionModes` from `redux-injectors`):
@@ -57,6 +55,6 @@ A `mode` argument can be one of three constants (import the enum `SagaInjectionM
 
 {% hint style="info" %}
 
-🎉 **Good News:** You don't need to write this boilerplate code by hand, the `container` generator will generate it for you. ✓
+🎉 **Good News:** You don't need to write this boilerplate code by hand, the `slice` generator will generate it for you. ✓
 
 {% endhint %}

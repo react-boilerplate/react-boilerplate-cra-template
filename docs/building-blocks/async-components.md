@@ -1,6 +1,6 @@
 # Async Components
 
-To load a component asynchronously, create a `Loadable` file by hand or via component/container generators with the 'Do you want to load resources asynchronously?' option activated.
+To load a component asynchronously, create a `Loadable` file by hand or via component generator with the 'Do you want to load resources asynchronously?' option activated.
 
 This is the content of the file by default:
 

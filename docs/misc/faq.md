@@ -6,7 +6,7 @@
 
 ## Using reducers optimistically
 
-If you have containers that should be available throughout the app, like a `NavigationBar` (i.e., they aren't route-specific), you need to add their respective reducers to the root reducer with the help of `combineReducers`.
+If you have components that should be available throughout the app, like a `NavigationBar` (i.e., they aren't route-specific), you need to add their respective reducers to the root reducer with the help of `combineReducers`.
 
 ```ts
 // In src/store/reducers.ts
@@ -15,7 +15,7 @@ If you have containers that should be available throughout the app, like a `Navi
 import { combineReducers } from '@reduxjs/toolkit';
 ...
 
-import navigationBarReducer from 'containers/NavigationBar/reducer';
+import { reducer } from 'components/NavigationBar/slice';
 
 export function createReducer(injectedReducers: InjectedReducersType = {}) {
   const rootReducer = combineReducers({

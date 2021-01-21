@@ -2,6 +2,8 @@
 
 You have just **3** easy-peasy steps to do :)
 
+⚠️ Using [Yarn Package Manager](https://yarnpkg.com) is recommended over `npm`.
+
 **1)** Create **CRA** app with the custom template
 
 ```shell

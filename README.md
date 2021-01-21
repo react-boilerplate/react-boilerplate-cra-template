@@ -36,14 +36,14 @@ with a focus on
 
 ---
 
-The official [Create React App](https://github.com/facebook/create-react-app) template of [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate)
+The official [Create React App](https://github.com/facebook/create-react-app) template of the `discontinued` [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate)
 ![](https://img.shields.io/github/stars/react-boilerplate/react-boilerplate?style=flat)
 
 Start your `create-react-app` projects in seconds with the best, industry-standard tools and practices made ready for you.
 
-**📚Documentation:** [Gitbook](https://cansahin.gitbook.io/react-boilerplate-cra-template/)
+**📚 Documentation:** [Gitbook](https://cansahin.gitbook.io/react-boilerplate-cra-template/)
 
-**🎨 Check the example app:** [Boilerplate Example Application](https://react-boilerplate.github.io/react-boilerplate-cra-template/)
+**🎨 Check the example app:** [Demonstrating the features](https://react-boilerplate.github.io/react-boilerplate-cra-template/)
 
 **📦 Package:** [npm](https://www.npmjs.com/package/cra-template-rb)
 
@@ -53,6 +53,8 @@ Start your `create-react-app` projects in seconds with the best, industry-standa
 ---
 
 ## Install & Start
+
+⚠️ Using [Yarn Package Manager](https://yarnpkg.com) is recommended over `npm`.
 
 Create React App with the template
 
@@ -70,10 +72,16 @@ yarn start
 Remove the example app to start your project!
 
 ```shell
-yarn run cleanAndSetup
+yarn cleanAndSetup
 ```
 
+---
+
 ## Features
+
+> This project is **NOT** a framework, UI component library or a design system. The only purpose of this template is to assist you starting your CRA app with a solid tool stack and development patterns. It's 100% customizable. After you start your journey and once you understand the concepts offered here you should personalize your code accordingly instead of being tied to the starter project.
+>
+> You can add or remove literally anything and use whichever library or tools you prefer.
 
 <dl>
 
