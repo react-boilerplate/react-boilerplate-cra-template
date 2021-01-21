@@ -30,7 +30,7 @@ export const sliceGenerator: PlopGeneratorConfig = {
     {
       type: 'input',
       name: SliceProptNames.sliceName,
-      message: 'What should it be called (automatically adds ...Slice prefix)',
+      message: 'What should it be called (automatically adds ...Slice postfix)',
     },
     {
       type: 'directory',

@@ -27,3 +27,15 @@ export const use{{ properCase sliceName }}Slice = () => {
   {{/if}}
   return { actions: slice.actions };
 };
+
+/**
+ * Example Usage:
+ *
+ * export function MyComponentNeedingThisSlice() {
+ *  const { actions } = use{{ properCase sliceName }}Slice();
+ *
+ *  const onButtonClick = (evt) => {
+ *    dispatch(actions.someAction());
+ *   };
+ * }
+ */
