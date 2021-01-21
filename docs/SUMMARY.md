@@ -11,7 +11,7 @@
 ## Building Blocks
 
 - [Building Blocks](building-blocks/README.md)
-- [Redux + Reselect + Saga = Slice](<(building-blocks/slice/README.md)>)
+- [The `Slice`](building-blocks/slice/README.md)
   - [Redux & Toolkit](building-blocks/redux-toolkit.md)
   - [Reselect](building-blocks/reselect.md)
   - [Redux-Saga](building-blocks/redux-saga.md)
