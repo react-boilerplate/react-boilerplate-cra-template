@@ -3,7 +3,7 @@
 ## Cleaning
 
 ```Shell
-yarn run cleanAndSetup
+yarn cleanAndSetup
 ```
 
 Removes the example app, replacing it with the smallest amount of boilerplate code necessary to start writing your app! Also, it makes some essential changes to your setup to give you a clean and working start.
@@ -17,21 +17,21 @@ Removes the example app, replacing it with the smallest amount of boilerplate co
 ## Generators
 
 ```Shell
-yarn run generate
+yarn generate
 ```
 
-Allows you to auto-generate boilerplate code for common parts of your application, specifically `component`s, and `container`s. You can also run `yarn run generate <part>` to skip the first selection (e.g., `yarn run generate container`).
+Allows you to auto-generate boilerplate code for common parts of your application, specifically `component`s, and `redux-toolkit slice`s. You can also run `yarn generate <part>` to skip the first selection (e.g., `yarn generate component`).
 
 ```Shell
-yarn run test:generators
+yarn test:generators
 ```
 
-Test whether the generators are working fine. It generates components and containers with a variety of settings. This command is helpful if you decide to customize generators for your needs.
+Test whether the generators are working fine. It generates components and slices with a variety of settings. This command is helpful if you decide to customize generators for your needs.
 
 ## Production
 
 ```Shell
-yarn run start:prod
+yarn start:prod
 ```
 
 - Builds your app (see `yarn run build`)
@@ -57,13 +57,13 @@ yarn test -- Button
 ## Linting
 
 ```Shell
-yarn run lint
+yarn lint
 ```
 
 Lints your Typescript and your CSS.
 
 ```Shell
-yarn run lint:fix
+yarn lint:fix
 ```
 
 Lints your code and tries to fix any errors it finds.
@@ -71,13 +71,13 @@ Lints your code and tries to fix any errors it finds.
 ## Extracting translation JSON Files
 
 ```Shell
-yarn run extract-messages
+yarn extract-messages
 ```
 
 ## Typescript
 
 ```Shell
-yarn run checkTs
+yarn checkTs
 ```
 
 Checks for TypeScript errors.

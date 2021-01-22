@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import * as slice from '../slice';
 import { Store } from '@reduxjs/toolkit';
 import { ThemeProvider } from '../ThemeProvider';
 import { configureAppStore } from 'store/configureStore';
 import { useTheme } from 'styled-components';
+import { selectTheme } from '../slice/selectors';
 
 const renderThemeProvider = (store: Store, Child: React.FunctionComponent) =>
   render(
@@ -38,6 +38,6 @@ describe('<ThemeProvider />', () => {
       return <h1>a</h1>;
     };
     renderThemeProvider(store, children);
-    expect(theme).toBe(slice.selectTheme(store.getState() as any));
+    expect(theme).toBe(selectTheme(store.getState() as any));
   });
 });
