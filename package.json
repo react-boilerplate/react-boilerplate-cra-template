@@ -57,7 +57,7 @@
     "create:npm-package": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-npm-package.script.ts",
     "create:cra-app": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-cra-app.script.ts",
     "// ---PUBLISHING---": "",
-    "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' yarn run build && gh-pages -d build",
+    "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' yarn build && gh-pages -d build",
     "changelog": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-changelog.script.ts",
     "release": "standard-version",
     "publish:npm": "yarn run create:npm-package && yarn publish .cra-template-rb --non-interactive"
