@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.1.1...v1.2.0) (2021-01-22)
+
+### Features
+
+- ✨revised folder structure & generators ([#107](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/107)) ([b1e9d69](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/b1e9d696c027eedd19594a071d72ceec2e832ef8))
+
+### Bug Fixes
+
+- 🐛 added missing web-vitals to startingTemplate ([4fc4bc3](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/4fc4bc3a03d28e781c177f10501d8bf88458806e))
+- 🐛 dynamic messages loading ([02d9a1d](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/02d9a1da3d868c0a6cde7cfbede8889210b37482)), closes [#103](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/103)
+- 🐛 message extraction script [#102](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/102) ([4b8788c](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/4b8788c9b9d9e3004feebf8e04fdb96e16a3a2d7))
+- 🐛 removed offline-first paradigm ([a27ceca](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/a27ceca7620c5133a70fe21cad83a391a38b8fa5))
+
+### Documentation
+
+- 📚️ removed how-to repo ([324d3d3](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/324d3d3a10cd56acdd1a7be0dee31b28c718ef3d))
+
+### Internals
+
+**This section only concerns the contributors of this project. You can ignore these changes since they DO NOT create changes in the CRA Template**
+
+<details><summary>Click to see the internal changes</summary>
+
+- 👷 added manual triggers ([a514701](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/a514701081fe65ea6099be810ed14c1e1ca80a7d))
+- 🔧 added i18n mock to generators ([#106](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/106)) ([2440250](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2440250e9a69bff9216ba73aad83168f28985ca3))
+- 🔧 bumped typescript version ([386de98](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/386de985a40a2fe1e75e4873af2d94044516964a))
+- 🚨 fixed minor type error ([976d19d](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/976d19ddab033548f89637de8acd58c86663792a))
+
+</details>
+
 ## [1.1.1](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.2...v1.1.0) (2020-12-02)
 
 ### Features
