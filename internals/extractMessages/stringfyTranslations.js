@@ -57,7 +57,7 @@ function stringifyRecursively(content, key) {
 }
 
 function isImportedTranslationObject(content, key) {
-  const pattern = `import {.*?${key}.*?} from.+locales/i18n.*`;
+  const pattern = `import {.*?${key}.*?} from.+locales/translations.*`;
   return RegExp(pattern, 'gim').test(content);
 }
 

@@ -42,15 +42,9 @@ In any case, here's the TL;DR:
 
 ### `src/app`
 
-We use the [container/component architecture](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.4rmjqneiw). The **`containers/`** folder holds React components which are connected to the Redux store. The **`components/`** folder has dumb React components that depend on containers for data. **Containers care about how things work, while components care about how things look.**
+**FOLDER STRUCTURE HERE IS COMPLETELY DETERMINED BY YOU!**
 
-We've found that for many applications treating single pages (e.g., the LoginPage, the HomePage, etc.) as containers and their small parts (e.g., the Login form, the Navigation bar) as components works well, but there are no rigid rules. **Bend the architecture to the needs of your app, nothing is set in stone!**
-
-{% hint style="warning" %}
-
-🧙**Learn More:** See [this article](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) by Dan Abramov for a great introduction to this approach.
-
-{% endhint %}
+There have been many discussions on how the components and everything else should be structured. Yet, one size never fits all. Therefore, it is entirely personal. This boilerplate dictates **NO** folder structures. Example application provides a simple structure for a simple web application.
 
 ### `src/`
 
@@ -60,9 +54,11 @@ Here is the rest of the code that supports your app behind-the-scenes, with feat
 
 This section you won't be bothering with much. We ship some extra functionalities to help with your web app and here it lies. It contains the code for:
 
-- `internals/generators`: This folder has the code to scaffold out new components, containers, and routes.
+- `internals/extractMessages`: Utils to extract messages into JSON syntax.
 
-- `internals/testing`: This folder contains mocks which Jest uses when testing your app, e.g., for images.
+- `internals/generators`: Create new components and redux-toolkit slices using CLI.
+
+- `internals/testing`: Testing the internal features like `generators`. You can customize your generators and still test them if they are working
 
 {% hint style="warning" %}
 

@@ -11,7 +11,6 @@ import 'react-app-polyfill/stable';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import * as serviceWorker from 'serviceWorker';
 
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
@@ -22,6 +21,8 @@ import { App } from 'app';
 import { HelmetProvider } from 'react-helmet-async';
 
 import { configureAppStore } from 'store/configureStore';
+
+import reportWebVitals from 'reportWebVitals';
 
 // Initialize languages
 import './locales/i18n';
@@ -47,7 +48,7 @@ if (module.hot) {
   });
 }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

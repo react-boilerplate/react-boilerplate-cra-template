@@ -1,0 +1,11 @@
+import { createSelector } from '@reduxjs/toolkit';
+
+import { RootState } from 'types';
+import { initialState } from '.';
+
+const selectSlice = (state: RootState) => state.{{ camelCase sliceName }} || initialState;
+
+export const select{{ properCase sliceName }} = createSelector(
+  [selectSlice],
+  state => state,
+);

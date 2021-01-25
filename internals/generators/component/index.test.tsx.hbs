@@ -1,11 +1,24 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
 
-import { {{ properCase ComponentName }} } from '..';
+import { {{ properCase componentName }} } from '..';
 
-describe('<{{ properCase ComponentName }}  />', () => {
+{{#if wantTranslations}}
+jest.mock('react-i18next', () => ({
+  useTranslation: () => {
+    return {
+      t: str => str,
+      i18n: {
+        changeLanguage: () => new Promise(() => {}),
+      },
+    };
+  },
+}));
+{{/if}}
+
+describe('<{{ properCase componentName }}  />', () => {
   it('should match snapshot', () => {
-    const loadingIndicator = render(<{{ properCase ComponentName }} />);
+    const loadingIndicator = render(<{{ properCase componentName }} />);
     expect(loadingIndicator.container.firstChild).toMatchSnapshot();
   });
 });

@@ -11,10 +11,11 @@
 ## Building Blocks
 
 - [Building Blocks](building-blocks/README.md)
-- [Redux & Toolkit](building-blocks/redux-toolkit.md)
-- [Reselect](building-blocks/reselect.md)
-- [Redux-Saga](building-blocks/redux-saga.md)
-- [Redux Injectors](building-blocks/redux-injectors.md)
+- [The `Slice`](building-blocks/slice/README.md)
+  - [Redux & Toolkit](building-blocks/slice/redux-toolkit.md)
+  - [Reselect](building-blocks/slice/reselect.md)
+  - [Redux-Saga](building-blocks/slice/redux-saga.md)
+  - [Redux Injectors](building-blocks/slice/redux-injectors.md)
 - [Async Components](building-blocks/async-components.md)
 - [Routing](building-blocks/routing.md)
 - [i18n Internationalization & Pluralization](building-blocks/i18n.md)

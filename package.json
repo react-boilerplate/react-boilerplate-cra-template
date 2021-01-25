@@ -37,7 +37,7 @@
     "test": "react-scripts test",
     "// ---TEMPLATE---": "Scripts will be also in the template",
     "start:prod": "yarn run build && serve -s build",
-    "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/test-generators.ts",
+    "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/generators/test-generators.ts",
     "checkTs": "tsc --noEmit",
     "eslint": "eslint --ext js,ts,tsx",
     "lint": "yarn run eslint src",
@@ -85,8 +85,7 @@
       "!src/**/*/messages.ts",
       "!src/reportWebVitals.ts",
       "!src/**/*/types.ts",
-      "!src/index.tsx",
-      "!src/serviceWorker.ts"
+      "!src/index.tsx"
     ],
     "coverageThreshold": {
       "global": {
@@ -118,12 +117,12 @@
   "devDependencies": {
     "@commitlint/cli": "9.1.2",
     "@commitlint/config-conventional": "9.1.2",
-    "@testing-library/jest-dom": "5.11.4",
-    "@testing-library/react": "11.0.2",
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "11.2.3",
     "@types/fontfaceobserver": "0.0.6",
     "@types/jest": "25.1.4",
     "@types/node": "14.6.4",
-    "@types/react": "16.9.49",
+    "@types/react": "17.0.0",
     "@types/react-dom": "16.9.8",
     "@types/react-redux": "7.1.9",
     "@types/react-router-dom": "5.1.5",
@@ -144,12 +143,14 @@
     "git-branch-is": "4.0.0",
     "husky": "4.2.5",
     "i18next-scanner": "2.11.0",
+    "inquirer": "7.3.3",
+    "inquirer-directory": "2.2.0",
     "jest-styled-components": "7.0.3",
     "lint-staged": "10.3.0",
     "node-plop": "0.26.2",
     "plop": "2.7.4",
     "prettier": "2.1.1",
-    "react-scripts": "4.0.0",
+    "react-scripts": "4.0.1",
     "react-test-renderer": "16.13.1",
     "replace-in-file": "6.1.0",
     "rimraf": "3.0.2",
@@ -162,7 +163,7 @@
     "stylelint-processor-styled-components": "1.10.0",
     "ts-jest": "26.3.0",
     "ts-node": "9.0.0",
-    "typescript": "4.0.5"
+    "typescript": "4.1.3"
   },
   "browserslist": {
     "production": [

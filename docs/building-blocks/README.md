@@ -10,8 +10,8 @@ It is one of the most important files of the boilerplate. It contains all the gl
 
 - `react-app-polyfill` is imported to enable compatibility with many browsers and cool stuff like generator functions, Promises, etc.
 - A Redux `store` is instantiated.
-- `ReactDOM.render()` not only renders the [root React component](https://github.com/react-boilerplate/react-boilerplate/blob/master/app/containers/App/index.js), called `<App />`, of your application, but it renders it with `<Provider />`.
-- Hot module replacement via [Webpack HMR](https://webpack.js.org/guides/hot-module-replacement/) makes the i18n translations hot reloadable.
+- `ReactDOM.render()` not only renders the [root React component](https://github.com/react-boilerplate/react-boilerplate-cra-template/blob/master/src/app/index.tsx), called `<App />`, of your application, but it renders it with `<Provider />`.
+- Hot module replacement via [Webpack HMR](https://webpack.js.org/guides/hot-module-replacement/) makes the i18n translations hot re-loadable.
 - i18next internationalization support setup.
 - `<Provider />` connects your app with the Redux `store`.
 
@@ -79,7 +79,7 @@ Imagine that your application is fetching data in JSON format from a back-end. F
 2.  `API_SUCCESS`: Upon dispatching this, your application should show the data to the user.
 3.  `API_FAILURE`: Upon dispatching this, your application should show an error message to the user.
 
-And this is only for **_one_** API call. In a real-world scenario, one page of your application could be making tens of API calls. How do we manage all of them effectively? It essentially boils down to controlling the flow of your application. What if there was a background process that handled multiple actions simultaneously and communicated with the Redux store and React containers at the same time? Here is where `redux-saga` enters the picture.
+And this is only for **_one_** API call. In a real-world scenario, one page of your application could be making tens of API calls. How do we manage all of them effectively? It essentially boils down to controlling the flow of your application. What if there was a background process that handled multiple actions simultaneously and communicated with the Redux store and React components at the same time? Here is where `redux-saga` enters the picture.
 
 For a mental model, consider a saga like a separate thread in your application that's solely responsible for side-effects. Then `redux-saga` is a Redux middleware, which means this thread can be started, paused, and canceled from the main application with standard Redux actions. It has access to the full Redux application state, and it can dispatch Redux actions as well.
 
