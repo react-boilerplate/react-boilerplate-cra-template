@@ -15,7 +15,7 @@ If you have components that should be available throughout the app, like a `Navi
 import { combineReducers } from '@reduxjs/toolkit';
 ...
 
-import { reducer } from 'components/NavigationBar/slice';
+import { reducer as navigationBarReducer } from 'components/NavigationBar/slice';
 
 export function createReducer(injectedReducers: InjectedReducersType = {}) {
   const rootReducer = combineReducers({
