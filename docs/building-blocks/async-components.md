@@ -21,9 +21,13 @@ In this case, the app won't show anything while loading your component. You can,
 import * as React from 'react';
 import { lazyLoad } from 'utils/loadable';
 
-export const HomePage = lazyLoad(() => import('./index'), {
-  fallback: <div>Loading...</div>,
-});
+export const HomePage = lazyLoad(
+  () => import('./index'),
+  module => module.HomePage,
+  {
+    fallback: <div>Loading...</div>,
+  }
+);
 ```
 
 This feature is built into the boilerplate using React's `lazy` and `Suspense` features.
