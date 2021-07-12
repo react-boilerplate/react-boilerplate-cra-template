@@ -18,7 +18,7 @@ export const HomePage = lazyLoad(
 In this case, the app won't show anything while loading your component. You can, however, make it display a custom loader with:
 
 ```ts
-import * as React from 'react';
+import React from 'react';
 import { lazyLoad } from 'utils/loadable';
 
 export const HomePage = lazyLoad(
@@ -30,4 +30,5 @@ export const HomePage = lazyLoad(
 );
 ```
 
+Make sure to rename your `Loadable.ts` file to `Loadable.tsx`.
 This feature is built into the boilerplate using React's `lazy` and `Suspense` features.
