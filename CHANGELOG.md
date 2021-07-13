@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.0...v1.2.1) (2021-07-13)
+
+### Documentation
+
+- 📚️ fixed typo [#129](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/129) ([e7794c8](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/e7794c87bd6e13a0ed377f1e0d18640954dabeee))
+- 📚️ fixing typo for navigationBarReducer ([#114](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/114)) ([d04de39](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/d04de392090129c299828948bb7343dd25d6b016))
+- 📚️added missing selector function in async components ([#133](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/133)) ([2bb4bc7](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2bb4bc7ae17c62d56d98efcab19e672bc84de44d))
+
+### Internals
+
+- 🔧 maintenance ([2e1b814](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2e1b814b2e005edbe79602d9d45dd2b56cee733e))
+
 ## [1.2.0](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.1.1...v1.2.0) (2021-01-22)
 
 ### Features
