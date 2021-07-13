@@ -1,4 +1,6 @@
 import shell from 'shelljs';
+import replace from 'replace-in-file';
+
 import { shellEnableAbortOnFail, shellDisableAbortOnFail } from './utils';
 
 interface Options {}
@@ -6,11 +8,30 @@ interface Options {}
 export function crateTemplateFolder(opts: Options = {}) {
   const abortOnFailEnabled = shellEnableAbortOnFail();
 
-  const copyToTemplate = (path: string, isRecursive?: boolean) => {
+  const copyToTemplate = (
+    path: string,
+    isRecursive?: boolean,
+    modifyContent?: {
+      from: RegExp;
+      to: string;
+    },
+  ) => {
+    const p = `template/${path}`;
     if (isRecursive) {
-      shell.cp('-r', path, `template/${path}`);
+      shell.cp('-r', path, p);
     } else {
-      shell.cp(path, `template/${path}`);
+      shell.cp(path, p);
+    }
+    if (modifyContent) {
+      try {
+        replace.sync({
+          files: p,
+          from: modifyContent.from,
+          to: modifyContent.to,
+        });
+      } catch (error) {
+        console.error('Couldnt modify content:', error);
+      }
     }
   };
 
@@ -18,6 +39,13 @@ export function crateTemplateFolder(opts: Options = {}) {
   shell.rm('-rf', 'template');
 
   shell.mkdir('template');
+
+  // We want only pre-commit hook with custom script excluded
+  shell.mkdir('template/.husky');
+  copyToTemplate('.husky/pre-commit', false, {
+    from: /yarn verify-startingTemplate-changes/g,
+    to: '',
+  });
 
   shell.mkdir('template/internals');
   copyToTemplate('internals/generators', true);

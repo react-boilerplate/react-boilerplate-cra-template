@@ -57,8 +57,9 @@ describe('getRepos Saga', () => {
     const requestDescriptor = getReposIterator.next(username).value;
     expect(requestDescriptor).toMatchSnapshot();
 
-    const putDescriptor = getReposIterator.throw({ response: { status: 404 } })
-      .value;
+    const putDescriptor = getReposIterator.throw({
+      response: { status: 404 },
+    }).value;
     expect(putDescriptor).toEqual(
       put(slice.githubRepoFormActions.repoError(RepoErrorType.USER_NOT_FOUND)),
     );
@@ -83,8 +84,9 @@ describe('getRepos Saga', () => {
     const requestDescriptor = getReposIterator.next(username).value;
     expect(requestDescriptor).toMatchSnapshot();
 
-    const putDescriptor = getReposIterator.throw(new Error('Failed to fetch'))
-      .value;
+    const putDescriptor = getReposIterator.throw(
+      new Error('Failed to fetch'),
+    ).value;
     expect(putDescriptor).toEqual(
       put(
         slice.githubRepoFormActions.repoError(RepoErrorType.GITHUB_RATE_LIMIT),

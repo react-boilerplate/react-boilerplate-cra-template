@@ -1,7 +1,6 @@
 import shell from 'shelljs';
 import path from 'path';
 import chalk from 'chalk';
-import replace from 'replace-in-file';
 import fs from 'fs';
 const packageJson = require('../../package.json');
 
@@ -28,31 +27,24 @@ export function cleanAndSetup(opts: Options = {}) {
 
   shell.exec('yarn run prettify -- src/*', { silent: true });
 
-  cleanPackageJsonFile();
+  modifyPackageJsonFile();
 
   shell.echo(
     chalk.green('Example app removed and setup completed. Happy Coding!!!'),
   );
 }
 
-function cleanPackageJsonFile() {
+function modifyPackageJsonFile() {
   delete packageJson['eslintConfig'];
   delete packageJson['dependencies']['replace-in-file'];
   delete packageJson['scripts']['cleanAndSetup'];
 
+  packageJson['scripts']['prepare'] = 'husky install';
+
   fs.writeFileSync('./package.json', JSON.stringify(packageJson));
   shell.exec('yarn run prettify -- package.json', { silent: true });
 
-  try {
-    // Remove explanation from husky to enable it
-    replace.sync({
-      files: 'package.json',
-      from: /"husky\((.*?)\)"/g,
-      to: '"husky"',
-    });
-  } catch (error) {
-    console.error('Couldnt clean husky:', error);
-  }
+  shell.exec('yarn install', { silent: false });
 }
 
 (function () {
