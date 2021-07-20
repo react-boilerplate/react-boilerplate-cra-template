@@ -60,8 +60,7 @@
     "publish:github": "cross-env PUBLIC_URL='/react-boilerplate-cra-template' yarn build && gh-pages -d build",
     "changelog": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/create-changelog.script.ts",
     "release": "standard-version",
-    "publish:npm": "yarn run create:npm-package && yarn publish .cra-template-rb --non-interactive",
-    "prepare": "husky install"
+    "publish:npm": "yarn run create:npm-package && yarn publish .cra-template-rb --non-interactive"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
