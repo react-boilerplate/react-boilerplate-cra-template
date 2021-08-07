@@ -2,7 +2,7 @@
   "package": {
     "engines": {
       "yarn": ">=1.22.10",
-      "node": ">=14.0.0"
+      "node": ">=14.15.0"
     },
     "scripts": {
       "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/generators/test-generators.ts",
