@@ -9,7 +9,7 @@
   "license": "MIT",
   "engines": {
     "yarn": ">=1.22.10",
-    "node": ">=14.0.0"
+    "node": ">=14.15.0"
   },
   "bugs": {
     "url": "https://github.com/react-boilerplate/react-boilerplate-cra-template/issues"
