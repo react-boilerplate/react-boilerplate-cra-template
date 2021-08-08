@@ -36,7 +36,6 @@ export function cleanAndSetup(opts: Options = {}) {
 
 function modifyPackageJsonFile() {
   delete packageJson['eslintConfig'];
-  delete packageJson['dependencies']['replace-in-file'];
   delete packageJson['scripts']['cleanAndSetup'];
 
   packageJson['scripts']['prepare'] = 'husky install';
