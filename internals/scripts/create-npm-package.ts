@@ -5,9 +5,7 @@ import {
 } from './create-template-folder';
 import { shellEnableAbortOnFail, shellDisableAbortOnFail } from './utils';
 
-const packageName = require('../../package.json').name;
-const packageVersion = require('../../package.json').version;
-const packageFolder = `.${packageName}`;
+const packageFolder = '.cra-template-rb';
 interface Options {}
 
 export function createNpmPackage(opts: Options = {}) {
@@ -17,9 +15,13 @@ export function createNpmPackage(opts: Options = {}) {
 
   crateTemplateFolder(opts);
 
-  shell.exec(`npm pack`, { silent: true });
+  // Create a tarball archive and get filename of generated archive from stdout
+  const archiveFilename = shell
+    .exec(`npm pack`, { silent: true })
+    .stdout.trim();
+
   shell.exec(
-    `tar -xvf ${packageName}-${packageVersion}.tgz && mv package ${packageFolder} && rm ${packageName}-${packageVersion}.tgz`,
+    `tar -xvf ${archiveFilename} && mv package ${packageFolder} && rm ${archiveFilename}`,
     { silent: true },
   );
 
