@@ -40,7 +40,7 @@
       }
     },
     "dependencies": {
-      "@reduxjs/toolkit": "1.6.0",
+      "@reduxjs/toolkit": "1.6.1",
       "fontfaceobserver": "2.1.0",
       "i18next": "20.3.2",
       "i18next-browser-languagedetector": "6.1.2",
