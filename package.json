@@ -92,7 +92,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "1.6.1",
     "fontfaceobserver": "2.1.0",
-    "i18next": "20.3.2",
+    "i18next": "20.4.0",
     "i18next-browser-languagedetector": "6.1.2",
     "react": "17.0.2",
     "react-app-polyfill": "2.0.0",
