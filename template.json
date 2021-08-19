@@ -78,7 +78,7 @@
       "eslint-config-prettier": "8.3.0",
       "eslint-plugin-prettier": "3.4.0",
       "eslint-plugin-react-hooks": "4.2.0",
-      "husky": "7.0.0",
+      "husky": "7.0.1",
       "i18next-scanner": "3.0.0",
       "inquirer": "7.3.3",
       "inquirer-directory": "2.2.0",
