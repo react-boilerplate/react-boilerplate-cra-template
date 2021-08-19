@@ -68,7 +68,7 @@
       "@types/react-router-dom": "5.1.8",
       "@types/react-test-renderer": "17.0.1",
       "@types/rimraf": "3.0.2",
-      "@types/shelljs": "0.8.8",
+      "@types/shelljs": "0.8.9",
       "@types/styled-components": "5.1.11",
       "@types/testing-library__jest-dom": "5.14.0",
       "@types/webpack": "5.28.0",
