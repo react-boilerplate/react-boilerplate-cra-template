@@ -8,7 +8,6 @@
   },
   "license": "MIT",
   "engines": {
-    "yarn": ">=1.22.10",
     "node": ">=14.0.0"
   },
   "bugs": {
