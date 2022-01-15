@@ -6,7 +6,7 @@ import i18next from 'i18next';
 const shallowRenderer = createRenderer();
 
 describe('<Features />', () => {
-  it('should render with en translations', () => {
+  it.only('should render with en translations', () => {
     i18next.changeLanguage('en');
     shallowRenderer.render(<Features />);
     const renderedOutput = shallowRenderer.getRenderOutput();

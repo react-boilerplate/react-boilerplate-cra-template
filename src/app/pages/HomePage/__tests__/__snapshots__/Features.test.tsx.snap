@@ -196,12 +196,12 @@ exports[`<Features /> should render with de translations 1`] = `
 
 exports[`<Features /> should render with en translations 1`] = `
 <React.Fragment>
-  <Title
+  <styled.h1
     as="h2"
   >
     Features
-  </Title>
-  <Lead>
+  </styled.h1>
+  <styled.p>
     Crafted for 
     <strong>
       highly scalable
@@ -226,164 +226,164 @@ exports[`<Features /> should render with en translations 1`] = `
       best practices
     </strong>
     .
-  </Lead>
-  <Features__List>
-    <Features__Feature>
+  </styled.p>
+  <styled.ul>
+    <styled.li>
       <ForwardRef(SvgState)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Predictable State
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Build easy to test and debug, flexible and extensible applications using
            
-          <A
+          <styled.a
             href="https://redux.js.org/basics/usage-with-react"
             rel="noopener noreferrer"
             target="_blank"
           >
             Redux
-          </A>
+          </styled.a>
           . Unidirectional data flow allows for change logging and time travel debugging.
            
-          <A
+          <styled.a
             href="https://github.com/zalmoxisus/redux-devtools-extension"
             rel="noopener noreferrer"
             target="_blank"
           >
             Install Chrome Redux Dev Tools
-          </A>
+          </styled.a>
            
           to see how your application's state changes and travel in time to debug. Type any github username below and see it in action with Redux Dev Tools.
-        </P>
+        </styled.p>
         <GithubRepoForm />
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgCss)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Next Generation CSS
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Write composable CSS that’s co-located with your components for complete modularity. Ship only the styles that are on the page for the best performance. Generate application-wide styles and themes for your components. Change the theme below to see how easy and intuitive theming can ever be!
-        </P>
+        </styled.p>
         <ThemeSwitch />
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgIntl)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           i18n Internationalization & Pluralization
            
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Scalable apps need to support multiple languages, easily add and support multiple languages. Change the language below to see how instantly it updates the page without refreshing.
           <br />
           <small>
             (Only some of the features below are translated to demonstrate an example)
           </small>
-        </P>
+        </styled.p>
         <LanguageSwitch />
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgRoute)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Industry-standard Routing
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           It's natural to want to add pages (e.g. \`/about\`) to your application, and routing makes this possible.
           <br />
           <small>
             Go to our
              
-            <Link
+            <Styled(Link)
               to="/notfound"
             >
               /NotFound
-            </Link>
+            </Styled(Link)>
              
             page to see how routing works
           </small>
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgInstantFeedback)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Instant Feedback
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Enjoy the best DX and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgScaffolding)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Quick Scaffolding
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Automate the creation of components, features, routes, selectors and sagas - and their tests - right from the CLI! Avoid fighting the glue of your code and focus on your app!
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgSeo)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           SEO
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Supports SEO (document head tags management) for search engines that support indexing of JavaScript content.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgTs)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           TypeScript
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Typescript is the key to scalability. Build self-documented code, easy-to-debug code and create maintainable large applications and codebases with a highly productive development experience.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-    <Features__Feature>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+    <styled.li>
       <ForwardRef(SvgCodeAnalysis)
         className="feature-icon"
       />
-      <Features__Content>
-        <SubTitle>
+      <styled.div>
+        <styled.h3>
           Static Code Analysis
-        </SubTitle>
-        <P>
+        </styled.h3>
+        <styled.p>
           Focus on writing new features without worrying about formatting or code quality. With the right editor setup, your code will automatically be formatted and linted as you work.
-        </P>
-      </Features__Content>
-    </Features__Feature>
-  </Features__List>
+        </styled.p>
+      </styled.div>
+    </styled.li>
+  </styled.ul>
 </React.Fragment>
 `;

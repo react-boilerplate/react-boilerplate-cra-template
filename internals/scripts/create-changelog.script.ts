@@ -10,7 +10,7 @@ export function createChangeLog(opts: Options = {}) {
     process.exit(1);
   }
   shell.exec(
-    `npx standard-version --skip.commit --skip.tag --skip.changelog=0`,
+    `yarn standard-version --skip.commit --skip.tag --skip.changelog=0`,
     {
       silent: false,
     },

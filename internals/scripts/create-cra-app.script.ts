@@ -8,7 +8,7 @@ export function createCRA(opts: Options = {}) {
   shell.exec(`rm -rf ${app_name}`);
 
   const template = createNpmPackage();
-  shell.exec(`npx create-react-app ${app_name} --template file:${template}`, {
+  shell.exec(`yarn create react-app ${app_name} --template file:${template}`, {
     silent: false,
     fatal: true,
   });

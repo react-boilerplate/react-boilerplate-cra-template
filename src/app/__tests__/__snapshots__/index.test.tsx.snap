@@ -11,6 +11,7 @@ exports[`<App /> should render and match the snapshot 1`] = `
         "lang": "en-US",
       }
     }
+    prioritizeSeoTags={false}
     titleTemplate="%s - React Boilerplate"
   >
     <meta
