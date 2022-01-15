@@ -149,7 +149,7 @@
     "replace-in-file": "6.2.0",
     "rimraf": "3.0.2",
     "serve": "12.0.0",
-    "shelljs": "0.8.4",
+    "shelljs": "0.8.5",
     "standard-version": "9.3.0",
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "5.0.0",
