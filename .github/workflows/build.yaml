@@ -47,4 +47,23 @@ jobs:
       - run: yarn run test:generators
       - run: yarn run lint
       - run: yarn run checkTs
-
+  createCRAWithMultipleNodeVersions:
+    needs: createNpmPackage
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 17.x]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Download template
+        uses: actions/download-artifact@v1
+        with:
+          name: cra-template-rb
+          path: ../cra-template-rb # Put into the upper folder. create-react-app wants the current directory empty
+      - name: Create CRA from downloaded template
+        run: yarn create react-app --template file:../cra-template-rb .
+      - run: yarn run build
+      - run: yarn run test
