@@ -13,9 +13,10 @@ import { sliceVariations } from './sliceVariations';
 import { baseGeneratorPath } from '../../generators/paths';
 
 interface PlopGenerator extends PG {
-  runActions: <T extends string | number>(
-    props: { [P in T]: any },
-  ) => Promise<{ changes: []; failures: [] }>;
+  runActions: <T extends string | number>(props: { [P in T]: any }) => Promise<{
+    changes: [];
+    failures: [];
+  }>;
 }
 
 process.chdir(path.join(__dirname, '../../generators'));

@@ -26,7 +26,7 @@ export function* getRepos() {
     } else {
       yield put(actions.repoError(RepoErrorType.USER_HAS_NO_REPO));
     }
-  } catch (err) {
+  } catch (err: any) {
     if (err.response?.status === 404) {
       yield put(actions.repoError(RepoErrorType.USER_NOT_FOUND));
     } else if (err.message === 'Failed to fetch') {

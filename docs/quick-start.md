@@ -7,7 +7,7 @@ You have just **3** easy-peasy steps to do :)
 **1)** Create **CRA** app with the custom template
 
 ```shell
-npx create-react-app --template cra-template-rb my-app
+yarn create react-app --template cra-template-rb my-app
 ```
 
 **2)** Start the example application and checkout the features made ready for you.

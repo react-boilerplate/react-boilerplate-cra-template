@@ -10,7 +10,7 @@ jobs:
   createAndTestCRAFromNpm:
     strategy:
       matrix:
-        node-version: [14.x, 15.x, 16.x]
+        node-version: [16.x, 17.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Create CRA from npm template
-        run: npx create-react-app --template cra-template-rb .
+        run: yarn create react-app --template cra-template-rb .
       - run: yarn run build
       - run: yarn run test:generators
       - run: yarn run lint

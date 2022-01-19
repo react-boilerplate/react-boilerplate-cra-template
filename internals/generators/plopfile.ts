@@ -11,7 +11,7 @@ export default function plop(plop: NodePlopAPI) {
   plop.setGenerator('slice', sliceGenerator);
 
   plop.setActionType('prettify', (answers, config) => {
-    const data = config.data as PrettifyCustomActionData;
+    const data = config!.data as PrettifyCustomActionData;
     shell.exec(`yarn run prettify -- "${data.path}"`, { silent: true });
     return '';
   });

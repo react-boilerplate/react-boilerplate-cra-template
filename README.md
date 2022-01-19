@@ -60,7 +60,7 @@ Start your `create-react-app` projects in seconds with the best, industry-standa
 Create React App with the template
 
 ```shell
-npx create-react-app --template cra-template-rb my-app
+yarn create react-app --template cra-template-rb my-app
 ```
 
 Start and check our example app, if you want
