@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Masthead /> should render and match the snapshot 1`] = `
-<styled.main>
+<Masthead__Wrapper>
   <Logos />
-  <styled.h1>
+  <Title>
     React Boilerplate meets CRA
-  </styled.h1>
-  <styled.p>
+  </Title>
+  <Lead>
     Now you can use the
      
-    <styled.a
+    <A
       href="https://www.reactboilerplate.com/"
       rel="noopener noreferrer"
       target="_blank"
     >
       React Boilerplate
-    </styled.a>
+    </A>
      
     as a
      
-    <styled.a
+    <A
       href="https://github.com/facebook/create-react-app"
       rel="noopener noreferrer"
       target="_blank"
     >
       Create React App
-    </styled.a>
+    </A>
      
     template.
-  </styled.p>
-</styled.main>
+  </Lead>
+</Masthead__Wrapper>
 `;

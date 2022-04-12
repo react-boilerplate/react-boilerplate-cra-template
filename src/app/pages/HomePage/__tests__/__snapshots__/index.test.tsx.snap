@@ -16,9 +16,9 @@ exports[`<HomePage /> should render and match the snapshot 1`] = `
     />
   </Helmet>
   <NavBar />
-  <styled.div>
+  <PageWrapper>
     <Masthead />
     <Features />
-  </styled.div>
+  </PageWrapper>
 </React.Fragment>
 `;
