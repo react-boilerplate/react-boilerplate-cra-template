@@ -44,7 +44,7 @@ Start your `create-react-app` projects in seconds with the best, industry-standa
 
 **🎨 Check the example app:** [Demonstrating the features](https://react-boilerplate.github.io/react-boilerplate-cra-template/)
 
-**📂 Browse in VS Code:** [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/react-boilerplate/react-boilerplate-cra-template)
+**📂 Browse in VS Code:** [![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/react-boilerplate/react-boilerplate-cra-template)
 
 **📦 Package:** [npm](https://www.npmjs.com/package/cra-template-rb)
 
