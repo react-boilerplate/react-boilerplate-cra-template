@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.3...v1.2.4) (2022-04-12)
+
+### Bug Fixes
+
+- 🐛 quick fix for breaking changes of @types/react 18 ([69a5bb7](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/69a5bb7eb671db16a070950816117f3d94c9d9e0))
+
 ## [1.2.3](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.2...v1.2.3) (2022-01-19)
 
 ### Internals
