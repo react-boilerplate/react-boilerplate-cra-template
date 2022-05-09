@@ -110,8 +110,8 @@
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
-    "@testing-library/jest-dom": "5.16.1",
-    "@testing-library/react": "12.1.2",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.2.0",
     "@types/fontfaceobserver": "2.1.0",
     "@types/jest": "27.4.0",
     "@types/node": "14.14.31",

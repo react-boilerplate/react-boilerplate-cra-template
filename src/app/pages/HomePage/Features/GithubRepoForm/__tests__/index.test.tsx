@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Store } from '@reduxjs/toolkit';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styles/theme/ThemeProvider';
 import { HelmetProvider } from 'react-helmet-async';
@@ -76,33 +76,45 @@ describe('<GithubRepoForm />', () => {
     expect(component.container.querySelector('circle')).toBeInTheDocument();
   });
 
-  it('should display list when repos not empty', () => {
+  it('should display list when repos not empty', async () => {
     const repoName = 'testRepo';
     store.dispatch(
       actions.reposLoaded([{ id: 'test', name: repoName } as any]),
     );
-    expect(component.queryByText(repoName)).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoName)).toBeInTheDocument(),
+    );
   });
 
-  it('should display error when repoError fired', () => {
+  it('should display error when repoError fired', async () => {
     let error = RepoErrorType.USER_NOT_FOUND;
     store.dispatch(actions.repoError(error));
-    expect(component.queryByText(repoErrorText(error))).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoErrorText(error))).toBeInTheDocument(),
+    );
 
     error = RepoErrorType.USER_HAS_NO_REPO;
     store.dispatch(actions.repoError(error));
-    expect(component.queryByText(repoErrorText(error))).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoErrorText(error))).toBeInTheDocument(),
+    );
 
     error = RepoErrorType.USERNAME_EMPTY;
     store.dispatch(actions.repoError(error));
-    expect(component.queryByText(repoErrorText(error))).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoErrorText(error))).toBeInTheDocument(),
+    );
 
     error = RepoErrorType.RESPONSE_ERROR;
     store.dispatch(actions.repoError(error));
-    expect(component.queryByText(repoErrorText(error))).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoErrorText(error))).toBeInTheDocument(),
+    );
 
     error = RepoErrorType.GITHUB_RATE_LIMIT;
     store.dispatch(actions.repoError(error));
-    expect(component.queryByText(repoErrorText(error))).toBeInTheDocument();
+    await waitFor(() =>
+      expect(component.queryByText(repoErrorText(error))).toBeInTheDocument(),
+    );
   });
 });
