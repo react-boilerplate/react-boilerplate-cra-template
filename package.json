@@ -95,7 +95,7 @@
     "i18next-browser-languagedetector": "6.1.2",
     "react": "18.1.0",
     "react-app-polyfill": "3.0.0",
-    "react-dom": "18.1.0",
+    "react-dom": "^18.0.0",
     "react-helmet-async": "1.3.0",
     "react-i18next": "11.16.5",
     "react-is": "18.1.0",
