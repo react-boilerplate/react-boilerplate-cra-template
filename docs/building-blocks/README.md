@@ -10,7 +10,7 @@ It is one of the most important files of the boilerplate. It contains all the gl
 
 - `react-app-polyfill` is imported to enable compatibility with many browsers and cool stuff like generator functions, Promises, etc.
 - A Redux `store` is instantiated.
-- `ReactDOM.render()` not only renders the [root React component](https://github.com/react-boilerplate/react-boilerplate-cra-template/blob/master/src/app/index.tsx), called `<App />`, of your application, but it renders it with `<Provider />`.
+- `createRoot().render()` not only renders the [root React component](https://github.com/react-boilerplate/react-boilerplate-cra-template/blob/master/src/app/index.tsx), called `<App />`, of your application, but it renders it with `<Provider />`.
 - Hot module replacement via [Webpack HMR](https://webpack.js.org/guides/hot-module-replacement/) makes the i18n translations hot re-loadable.
 - i18next internationalization support setup.
 - `<Provider />` connects your app with the Redux `store`.

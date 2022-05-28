@@ -9,7 +9,7 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 // Use consistent styling
@@ -30,7 +30,7 @@ import './locales/i18n';
 const store = configureAppStore();
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 
-ReactDOM.render(
+ReactDOMClient.createRoot(MOUNT_NODE!).render(
   <Provider store={store}>
     <HelmetProvider>
       <React.StrictMode>
@@ -38,7 +38,6 @@ ReactDOM.render(
       </React.StrictMode>
     </HelmetProvider>
   </Provider>,
-  MOUNT_NODE,
 );
 
 // Hot reloadable translation json files
