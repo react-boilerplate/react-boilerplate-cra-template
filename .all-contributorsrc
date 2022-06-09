@@ -50,6 +50,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rejochandran",
+      "name": "Rejo Chandran",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4696985?v=4",
+      "profile": "https://github.com/rejochandran",
+      "contributions": [
+        "code",
+        "doc",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 8,
