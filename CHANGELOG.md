@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.5](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.4...v1.2.5) (2022-06-20)
+
+### Internals
+
+- 🔧 bump react to 18.1 ([#170](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/170)) ([7ef3155](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/7ef31555a29c273ffd02b55f30f913218d13eb1f))
+
 ### [1.2.4](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.3...v1.2.4) (2022-04-12)
 
 ### Bug Fixes
