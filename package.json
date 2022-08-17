@@ -147,7 +147,7 @@
     "react-test-renderer": "18.1.0",
     "replace-in-file": "6.3.2",
     "rimraf": "3.0.2",
-    "serve": "13.0.2",
+    "serve": "14.0.1",
     "shelljs": "0.8.5",
     "standard-version": "9.3.2",
     "stylelint": "14.2.0",
