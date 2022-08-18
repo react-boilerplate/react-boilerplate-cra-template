@@ -19,16 +19,16 @@ exports[`<App /> should render and match the snapshot 1`] = `
       name="description"
     />
   </Helmet>
-  <Switch>
+  <Routes>
     <Route
-      component={[Function]}
-      exact={true}
+      element={<Unknown />}
       path="/"
     />
     <Route
-      component={[Function]}
+      element={<Unknown />}
+      path="*"
     />
-  </Switch>
+  </Routes>
   <Memo(l) />
 </BrowserRouter>
 `;
