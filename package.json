@@ -90,7 +90,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.7.1",
-    "fontfaceobserver": "2.1.0",
+    "fontfaceobserver": "2.3.0",
     "i18next": "21.6.6",
     "i18next-browser-languagedetector": "6.1.2",
     "react": "18.1.0",
