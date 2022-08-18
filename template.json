@@ -89,7 +89,7 @@
       "prettier": "2.5.1",
       "react-test-renderer": "18.1.0",
       "rimraf": "3.0.2",
-      "serve": "13.0.2",
+      "serve": "14.0.1",
       "shelljs": "0.8.5",
       "stylelint": "14.2.0",
       "stylelint-config-recommended": "6.0.0",
