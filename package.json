@@ -147,7 +147,7 @@
     "prettier": "2.7.1",
     "react-scripts": "5.0.1",
     "react-test-renderer": "18.2.0",
-    "replace-in-file": "6.3.2",
+    "replace-in-file": "6.3.5",
     "rimraf": "3.0.2",
     "serve": "14.0.1",
     "shelljs": "0.8.5",
