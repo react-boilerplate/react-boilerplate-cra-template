@@ -8,7 +8,7 @@ There is a detailed explanation for this decision [here](https://reacttraining.c
 
 ## Usage
 
-To add a new route, simply import the `Route` component and use it standalone or inside the `Switch` component (all part of [RR6 API](https://reactrouter.com/docs/en/v6/getting-started/overview)):
+To add a new route, simply import the `Route` component and use it standalone or inside the `Routes` component (all part of [RR6 API](https://reactrouter.com/docs/en/v6/getting-started/overview)):
 
 ```ts
 <Route path="/" element={<HomePage />} />
