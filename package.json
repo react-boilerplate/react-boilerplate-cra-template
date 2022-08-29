@@ -150,7 +150,7 @@
     "serve": "14.0.1",
     "shelljs": "0.8.5",
     "standard-version": "9.5.0",
-    "stylelint": "14.10.0",
+    "stylelint": "14.11.0",
     "stylelint-config-recommended": "9.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.10.0",
