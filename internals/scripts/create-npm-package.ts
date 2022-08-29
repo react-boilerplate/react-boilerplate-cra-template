@@ -11,7 +11,7 @@ interface Options {}
 export function createNpmPackage(opts: Options = {}) {
   const abortOnFailEnabled = shellEnableAbortOnFail();
 
-  shell.rm('-rf', `${packageFolder}`);
+  shell.rm('-rf', packageFolder);
 
   crateTemplateFolder(opts);
 
@@ -38,5 +38,5 @@ export function createNpmPackage(opts: Options = {}) {
 }
 
 export function removeNpmPackage() {
-  shell.rm('-rf', `${packageFolder}`);
+  shell.rm('-rf', packageFolder);
 }
