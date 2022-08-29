@@ -20,10 +20,9 @@ export function createNpmPackage(opts: Options = {}) {
     .exec(`npm pack`, { silent: true })
     .stdout.trim();
 
-  shell.exec(
-    `tar -xvf ${archiveFilename} && mv package ${packageFolder} && rm ${archiveFilename}`,
-    { silent: true },
-  );
+  shell.exec(`tar -xvf ${archiveFilename}`, { silent: true });
+  shell.mv('package', packageFolder);
+  shell.rm(archiveFilename);
 
   removeTemplateFolder();
 
