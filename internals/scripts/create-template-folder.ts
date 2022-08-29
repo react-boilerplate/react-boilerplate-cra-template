@@ -5,7 +5,7 @@ import { shellEnableAbortOnFail, shellDisableAbortOnFail } from './utils';
 
 interface Options {}
 
-export function crateTemplateFolder(opts: Options = {}) {
+export function createTemplateFolder(opts: Options = {}) {
   const abortOnFailEnabled = shellEnableAbortOnFail();
 
   const copyToTemplate = (
@@ -30,7 +30,7 @@ export function crateTemplateFolder(opts: Options = {}) {
           to: modifyContent.to,
         });
       } catch (error) {
-        console.error('Couldnt modify content:', error);
+        console.error("Couldn't modify content:", error);
       }
     }
   };

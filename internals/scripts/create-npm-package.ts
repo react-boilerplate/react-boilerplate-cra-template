@@ -1,6 +1,6 @@
 import shell from 'shelljs';
 import {
-  crateTemplateFolder,
+  createTemplateFolder,
   removeTemplateFolder,
 } from './create-template-folder';
 import { shellEnableAbortOnFail, shellDisableAbortOnFail } from './utils';
@@ -13,7 +13,7 @@ export function createNpmPackage(opts: Options = {}) {
 
   shell.rm('-rf', packageFolder);
 
-  crateTemplateFolder(opts);
+  createTemplateFolder(opts);
 
   // Create a tarball archive and get filename of generated archive from stdout
   const archiveFilename = shell
