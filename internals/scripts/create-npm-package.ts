@@ -1,6 +1,6 @@
 import shell from 'shelljs';
 import {
-  crateTemplateFolder,
+  createTemplateFolder,
   removeTemplateFolder,
 } from './create-template-folder';
 import { shellEnableAbortOnFail, shellDisableAbortOnFail } from './utils';
@@ -11,19 +11,18 @@ interface Options {}
 export function createNpmPackage(opts: Options = {}) {
   const abortOnFailEnabled = shellEnableAbortOnFail();
 
-  shell.rm('-rf', `${packageFolder}`);
+  shell.rm('-rf', packageFolder);
 
-  crateTemplateFolder(opts);
+  createTemplateFolder(opts);
 
   // Create a tarball archive and get filename of generated archive from stdout
   const archiveFilename = shell
     .exec(`npm pack`, { silent: true })
     .stdout.trim();
 
-  shell.exec(
-    `tar -xvf ${archiveFilename} && mv package ${packageFolder} && rm ${archiveFilename}`,
-    { silent: true },
-  );
+  shell.exec(`tar -xvf ${archiveFilename}`, { silent: true });
+  shell.mv('package', packageFolder);
+  shell.rm(archiveFilename);
 
   removeTemplateFolder();
 
@@ -38,5 +37,5 @@ export function createNpmPackage(opts: Options = {}) {
 }
 
 export function removeNpmPackage() {
-  shell.rm('-rf', `${packageFolder}`);
+  shell.rm('-rf', packageFolder);
 }

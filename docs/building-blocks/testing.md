@@ -51,7 +51,7 @@ function HomePage() {
 
 _Note: This is a [state**ful** (or "smart") component](../understanding-react-boilerplate.md#src-app)_
 
-When rendered normally with the standard `ReactDOM.render` function, this will be the HTML output
+When rendered normally with the standard `ReactDOMClient.createRoot` function, this will be the HTML output
 (_Comments added in parallel to compare structures in HTML from JSX source_):
 
 ```html

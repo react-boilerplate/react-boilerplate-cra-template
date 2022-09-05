@@ -8,10 +8,10 @@ There is a detailed explanation for this decision [here](https://reacttraining.c
 
 ## Usage
 
-To add a new route, simply import the `Route` component and use it standalone or inside the `Switch` component (all part of [RR5 API](https://reacttraining.com/react-router/web/api)):
+To add a new route, simply import the `Route` component and use it standalone or inside the `Routes` component (all part of [RR6 API](https://reactrouter.com/docs/en/v6/getting-started/overview)):
 
 ```ts
-<Route exact path="/" component={HomePage} />
+<Route path="/" element={<HomePage />} />
 ```
 
 Top level routes are located in `src/app/index.tsx`.
@@ -20,34 +20,34 @@ If you want your route component (or any component for that matter) to be loaded
 
 ## Child Routes
 
-For example, if you have a route called `about` at `/about`, and want to make a child route called `team` at `/about/our-team`, follow the example in `src/app/index.tsx` to create a `Switch` within the parent component. The `exact` property should also be removed from the `about` parent route.
+For example, if you have a route called `about` at `/about`, and want to make a child route called `team` at `/about/our-team`, follow the example in `src/app/index.tsx` to create a `Routes` within the parent component.
 
 #### `AboutPage/index.tsx`
 
 ```ts
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 export function AboutPage() {
   return (
-    <Switch>
-      <Route exact path="/about/our-team" />
-    </Switch>
+    <Routes>
+      <Route path="/about/our-team" />
+    </Routes>
   );
 }
 ```
 
 ## Routing programmatically
 
-You can use the [react-router hooks](https://reacttraining.com/react-router/web/api/Hooks) to change the route or get params, etc.
+You can use the `react-router hooks`, such as [useNavigate](https://reactrouter.com/docs/en/v6/hooks/use-navigate) or [useParams](https://reactrouter.com/docs/en/v6/hooks/use-params), to change the route, get params, and more.
 
 ```ts
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function HomeButton() {
-  let history = useHistory();
+  let navigate = useNavigate();
 
   function handleClick() {
-    history.push('/home');
+    navigate('/home');
   }
 
   return (
@@ -60,6 +60,6 @@ function HomeButton() {
 
 {% hint style="info" %}
 
-You can read more in [`react-router`'s documentation](https://reacttraining.com/react-router/web/api).
+You can read more in [`react-router`'s documentation](https://reactrouter.com/docs/en/v6).
 
 {% endhint %}
