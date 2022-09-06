@@ -8,7 +8,7 @@ export interface GithubRepoFormState {
   repositories: Repo[];
 }
 
-export enum RepoErrorType {
+export const enum RepoErrorType {
   RESPONSE_ERROR = 1,
   USER_NOT_FOUND = 2,
   USERNAME_EMPTY = 3,
