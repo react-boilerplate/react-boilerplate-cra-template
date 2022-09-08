@@ -60,6 +60,11 @@ export function createTemplateFolder(opts: Options = {}) {
   copyToTemplate('internals/startingTemplate', true);
   copyToTemplate('internals/testing', true);
 
+  shell.mkdir('template/.yarn');
+  copyToTemplate('.yarn/releases', true);
+  copyToTemplate('.yarn/plugins', true);
+  copyToTemplate('.yarnrc.yml');
+
   copyToTemplate('.vscode', true);
   copyToTemplate('public', true);
   copyToTemplate('src', true);
@@ -69,7 +74,6 @@ export function createTemplateFolder(opts: Options = {}) {
   copyToTemplate('.eslintrc.js');
   copyToTemplate('.gitattributes');
   copyToTemplate('.gitignore');
-  copyToTemplate('.npmrc');
   copyToTemplate('.nvmrc');
   copyToTemplate('.prettierignore');
   copyToTemplate('.prettierrc');
@@ -79,7 +83,6 @@ export function createTemplateFolder(opts: Options = {}) {
 
   // Rename some specific files so they won't be discarded in 'yarn pack'
   shell.mv('template/.gitignore', 'template/gitignore');
-  shell.mv('template/.npmrc', 'template/npmrc');
 
   if (abortOnFailEnabled) shellDisableAbortOnFail();
 }

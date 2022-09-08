@@ -26,12 +26,6 @@ export function createNpmPackage(opts: Options = {}) {
 
   removeTemplateFolder();
 
-  // Rename the files that NPM has special conditions back
-  shell.mv(
-    `${packageFolder}/template/npmrc`,
-    `${packageFolder}/template/.npmrc`,
-  );
-
   if (abortOnFailEnabled) shellDisableAbortOnFail();
   return packageFolder;
 }
