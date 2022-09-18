@@ -10,9 +10,8 @@ They are highly suggested for the best Developer Experience. Extensions are resp
 
 - Eslint
 - Prettier
-- Chrome debugger
-- Jest
 - Styled Components
+- Jest
 
 These are the basic building blocks in the boilerplate.
 
