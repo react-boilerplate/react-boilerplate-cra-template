@@ -35,6 +35,7 @@ To upgrade to `Yarn 3` from `Yarn Classic/v1`, run the following command:
 
 ```bash
 yarn set version berry
+yarn install
 ```
 
 ## Yarn Plugins
