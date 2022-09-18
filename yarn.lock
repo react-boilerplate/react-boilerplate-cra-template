@@ -1074,15 +1074,15 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@commitlint/cli@17.0.1":
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-17.0.1.tgz#88c5ad3f297760ded589c3a33ed49321242e7ab0"
-  integrity sha512-5xT1G5pnynR0tk/ms8Ji7yr9lZCeQs4GLVVtyK/gw20w+enoLTVuRKKY9zg88hy9FoCycc/W8iip2xv3c8payg==
+"@commitlint/cli@17.1.2":
+  version "17.1.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-17.1.2.tgz#38240f84936df5216f749f06f838dc50cc85a43d"
+  integrity sha512-h/4Hlka3bvCLbnxf0Er2ri5A44VMlbMSkdTRp8Adv2tRiklSTRIoPGs7OEXDv3EoDs2AAzILiPookgM4Gi7LOw==
   dependencies:
     "@commitlint/format" "^17.0.0"
-    "@commitlint/lint" "^17.0.0"
-    "@commitlint/load" "^17.0.0"
-    "@commitlint/read" "^17.0.0"
+    "@commitlint/lint" "^17.1.0"
+    "@commitlint/load" "^17.1.2"
+    "@commitlint/read" "^17.1.0"
     "@commitlint/types" "^17.0.0"
     execa "^5.0.0"
     lodash "^4.17.19"
@@ -1134,7 +1134,7 @@
     "@commitlint/types" "^17.0.0"
     semver "7.3.7"
 
-"@commitlint/lint@^17.0.0":
+"@commitlint/lint@^17.1.0":
   version "17.1.0"
   resolved "https://registry.yarnpkg.com/@commitlint/lint/-/lint-17.1.0.tgz#de2d3baa2b20d9ec3d5fd2f2421f6025c8439630"
   integrity sha512-ltpqM2ogt/+SDhUaScFo0MdscncEF96lvQTPMM/VTTWlw7sTGLLWkOOppsee2MN/uLNNWjQ7kqkd4h6JqoM9AQ==
@@ -1144,7 +1144,7 @@
     "@commitlint/rules" "^17.0.0"
     "@commitlint/types" "^17.0.0"
 
-"@commitlint/load@^17.0.0":
+"@commitlint/load@^17.1.2":
   version "17.1.2"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-17.1.2.tgz#19c88be570d8666bbd32f9b3d81925a08328bc13"
   integrity sha512-sk2p/jFYAWLChIfOIp/MGSIn/WzZ0vkc3afw+l4X8hGEYkvDe4gQUUAVxjl/6xMRn0HgnSLMZ04xXh5pkTsmgg==
@@ -1176,7 +1176,7 @@
     conventional-changelog-angular "^5.0.11"
     conventional-commits-parser "^3.2.2"
 
-"@commitlint/read@^17.0.0":
+"@commitlint/read@^17.1.0":
   version "17.1.0"
   resolved "https://registry.yarnpkg.com/@commitlint/read/-/read-17.1.0.tgz#cf6bab410180f32f70891c97b15467c0b92ac14f"
   integrity sha512-73BoFNBA/3Ozo2JQvGsE0J8SdrJAWGfZQRSHqvKaqgmY042Su4gXQLqvAzgr55S9DI1l9TiU/5WDuh8IE86d/g==
