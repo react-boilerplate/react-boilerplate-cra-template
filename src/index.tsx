@@ -9,7 +9,7 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
 import * as React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import FontFaceObserver from 'fontfaceobserver';
 
@@ -39,9 +39,11 @@ openSansObserver.load().then(() => {
 });
 
 const store = configureAppStore();
-const MOUNT_NODE = document.getElementById('root') as HTMLElement;
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
+);
 
-ReactDOMClient.createRoot(MOUNT_NODE!).render(
+root.render(
   <Provider store={store}>
     <ThemeProvider>
       <HelmetProvider>
