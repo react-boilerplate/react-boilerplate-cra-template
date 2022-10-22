@@ -9,9 +9,19 @@ stats.json
 # misc
 .DS_Store
 npm-debug.log*
+
+# yarn
 yarn-debug.log*
 yarn-error.log*
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
+# env
 .env.development.local
 .env.test.local
 .env.production.local

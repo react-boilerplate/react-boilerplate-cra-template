@@ -51,7 +51,7 @@ function HomePage() {
 
 _Note: This is a [state**ful** (or "smart") component](../understanding-react-boilerplate.md#src-app)_
 
-When rendered normally with the standard `ReactDOMClient.createRoot` function, this will be the HTML output
+When rendered normally with the standard `ReactDOMClient.createRoot().render()` function, this will be the HTML output
 (_Comments added in parallel to compare structures in HTML from JSX source_):
 
 ```html
@@ -177,3 +177,5 @@ describe('<Button />', () => {
 And that's how you unit-test your components and make sure they work correctly!
 
 Be sure to have a look at our example application. It deliberately shows some variations of test implementations with `react-testing-library`.
+
+> For more robust user interaction tests, see [@testing-library/user-event](https://github.com/testing-library/user-event). `fireEvent` dispatches DOM events, but `user-event` should be used to simulate full interactions, which may fire multiple events and do additional checks along the way.

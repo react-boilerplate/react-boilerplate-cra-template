@@ -65,9 +65,9 @@ import { media } from 'styles/media';
 
 const SomeDiv = styled.div`
   display: flex;
-  ....
-    ${media.medium`
-      display: block
-  `};
+  .... ${media.medium} {
+    display: block;
+  }
 `;
+``;
 ```

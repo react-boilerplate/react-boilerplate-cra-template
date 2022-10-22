@@ -8,11 +8,10 @@ We provide a `.vscode` folder out-of-the-box which includes the **recommended ex
 
 They are highly suggested for the best Developer Experience. Extensions are responsible for:
 
-- Eslint
-- Prettier
-- Chrome debugger
-- Jest
-- Styled Components
+- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Styled Components](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
+- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 
 These are the basic building blocks in the boilerplate.
 

@@ -7,6 +7,7 @@
 
 - [CLI & Scaffolding](tools/commands.md)
 - [Editor Configuration](tools/editors.md)
+- [Package Managers](tools/package-managers.md)
 
 ## Building Blocks
 
