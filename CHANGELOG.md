@@ -2,13 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [1.2.5](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.4...v1.2.5) (2022-06-20)
+## [1.2.5](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.4...v1.2.5) (2022-06-20)
 
 ### Internals
 
 - 🔧 bump react to 18.1 ([#170](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/170)) ([7ef3155](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/7ef31555a29c273ffd02b55f30f913218d13eb1f))
 
-### [1.2.4](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.3...v1.2.4) (2022-04-12)
+## [1.2.4](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.2.3...v1.2.4) (2022-04-12)
 
 ### Bug Fixes
 
@@ -96,7 +96,7 @@ All notable changes to this project will be documented in this file. See [standa
 - 🔧 switched to yarn ([#89](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/89)) ([2a90e24](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2a90e24b8eaf8adcfb6008f20a2fc4a8f83bfa33))
 </details>
 
-### [1.0.2](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.1...v1.0.2) (2020-10-27)
+## [1.0.2](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.1...v1.0.2) (2020-10-27)
 
 Quick patch for cra v4 bug. No changes
 
@@ -104,7 +104,7 @@ Quick patch for cra v4 bug. No changes
 
 - CRA v4 bug fix ([#79](https://github.com/react-boilerplate/react-boilerplate-cra-template/issues/79)) ([2cae593](https://github.com/react-boilerplate/react-boilerplate-cra-template/commit/2cae593fbd53ee1e6e4a7f31cf50781c1b1ab6b9))
 
-### [1.0.1](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.0...v1.0.1) (2020-07-03)
+## [1.0.1](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v1.0.0...v1.0.1) (2020-07-03)
 
 ### Bug Fixes
 
@@ -168,7 +168,7 @@ Quick patch for cra v4 bug. No changes
 
 </details>
 
-### [0.1.3](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v0.1.2...v0.1.3) (2020-05-05)
+## [0.1.3](https://github.com/react-boilerplate/react-boilerplate-cra-template/compare/v0.1.2...v0.1.3) (2020-05-05)
 
 ### Bug Fixes
 

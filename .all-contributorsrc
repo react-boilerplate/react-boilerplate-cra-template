@@ -45,7 +45,7 @@
     {
       "login": "lourensdev",
       "name": "Lourens de Villiers",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5746141?v=4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5746141",
       "profile": "https://github.com/lourensdev",
       "contributions": [
         "doc"
@@ -54,11 +54,23 @@
     {
       "login": "rejochandran",
       "name": "Rejo Chandran",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4696985?v=4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4696985",
       "profile": "https://github.com/rejochandran",
       "contributions": [
         "code",
         "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "qeleb",
+      "name": "Caleb Hoff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15345696",
+      "profile": "https://github.com/qeleb",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
         "test"
       ]
     }
