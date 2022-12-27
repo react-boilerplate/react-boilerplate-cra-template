@@ -51,7 +51,7 @@ export function Features() {
               . Unidirectional data flow allows for change logging and time
               travel debugging.{' '}
               <A
-                href="https://github.com/zalmoxisus/redux-devtools-extension"
+                href="https://github.com/reduxjs/redux-devtools"
                 target="_blank"
                 rel="noopener noreferrer"
               >
