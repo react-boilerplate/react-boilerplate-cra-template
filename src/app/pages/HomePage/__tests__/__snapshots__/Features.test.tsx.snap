@@ -55,7 +55,7 @@ exports[`<Features /> should render with de translations 1`] = `
           . Unidirectional data flow allows for change logging and time travel debugging.
            
           <A
-            href="https://github.com/zalmoxisus/redux-devtools-extension"
+            href="https://github.com/reduxjs/redux-devtools"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -249,7 +249,7 @@ exports[`<Features /> should render with en translations 1`] = `
           . Unidirectional data flow allows for change logging and time travel debugging.
            
           <A
-            href="https://github.com/zalmoxisus/redux-devtools-extension"
+            href="https://github.com/reduxjs/redux-devtools"
             rel="noopener noreferrer"
             target="_blank"
           >
